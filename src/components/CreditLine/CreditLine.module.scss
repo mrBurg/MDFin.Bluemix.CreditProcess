@@ -1,0 +1,77 @@
+@import '@scss/service';
+
+.creditLine {
+  font-size: 1em;
+  margin-top: 2em;
+  width: 100%;
+  max-width: 420px;
+  flex: 1;
+
+  @include respond(xs) {
+    margin-top: 0.75em;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 1.12em;
+    text-align: center;
+    font-weight: normal;
+  }
+
+  :global .selectorWrap {
+    p {
+      font-size: 1.12em;
+      margin-top: 7.05em;
+      text-align: center;
+      color: $black;
+
+      @include respond(xs) {
+        margin-top: 4.8em;
+      }
+    }
+  }
+}
+
+.selector {
+  margin-top: 1.93em;
+  max-width: 404px;
+
+  @include respond(xs) {
+    margin-top: 1.3em;
+  }
+
+  :global .rc-slider-track,
+  :global .rc-slider-handle {
+    background-color: $red;
+  }
+
+  :global .rc-slider-mark-text {
+    font-size: 1.65em;
+    color: $gray-dark;
+    font-weight: bold;
+  }
+}
+
+.buttonWrap {
+  :global .button-widget:hover {
+    background: inherit;
+    color: $gray;
+  }
+}
+
+.button {
+  width: 100%;
+  font-size: 0.875em;
+  padding: 1.35em 0;
+  margin-top: 10em;
+}
+
+.link {
+  color: $gray-light;
+  font-size: 0.875em;
+  display: flex;
+  justify-content: center;
+  margin: 0.71em auto 0 auto;
+  background-color: inherit;
+  border: none;
+}

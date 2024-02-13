@@ -1,0 +1,7 @@
+.select {
+  width: 100%;
+
+  :global .input-widget__input {
+    padding: 0.5em 0;
+  }
+}

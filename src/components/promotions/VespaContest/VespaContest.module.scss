@@ -1,0 +1,644 @@
+@import '@scss/service';
+// @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+$mob: $lg; //$md;
+$abyssalBlue: #010157;
+
+.bannerWrap {
+  height: 100%;
+  width: 100%;
+  max-width: 1280px;
+  display: flex;
+  justify-content: center;
+  @include respond($mob) {
+    padding: 0 1em;
+  }
+}
+
+.banner {
+  display: flex;
+  background-color: $abyssalBlue;
+  width: 100%;
+  border-radius: 24px;
+  padding: 4.4em 3em;
+  @include respond($mob) {
+    flex-direction: column;
+    padding: 0.75em 1.4em;
+  }
+}
+
+.imageBlock {
+  width: 55%;
+  display: flex;
+  align-items: center;
+  @include respond($mob) {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  margin: 0 0 0 auto;
+  row-gap: 2em;
+  align-items: center;
+  @include respond($mob) {
+    width: 100%;
+    row-gap: 0.5em;
+  }
+
+  .promo {
+    &Header {
+      color: $white;
+      font-size: 1.5em;
+      font-weight: 800;
+      text-align: center;
+      @include respond($mob) {
+        font-size: 0.93em;
+      }
+    }
+
+    &Title {
+      font-size: 3em;
+      font-weight: 700;
+      font-style: italic;
+      color: $orange;
+      text-align: center;
+      @include respond($mob) {
+        font-size: 1.5em;
+      }
+    }
+
+    &Body {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      font-size: 1.5em;
+      font-weight: 800;
+      color: $white;
+
+      p {
+        color: $orange;
+        font-size: 2.25em;
+        font-weight: 400;
+        font-family: 'Kaushan Script', cursive;
+        margin-top: 0.25em;
+      }
+
+      @include respond($mob) {
+        font-size: 0.93em;
+        p {
+          font-size: 2.15em;
+          margin-top: 0;
+        }
+      }
+    }
+
+    &Button {
+      max-width: 270px;
+      height: 76px;
+      color: $white;
+      font-size: 24px;
+      margin-top: 1em;
+      @media only screen and (max-width: $sm) {
+        margin-top: 0.25em;
+      }
+    }
+
+    &Footnote {
+      font-size: 1em;
+      line-height: 124.1%;
+      color: $white;
+      text-align: center;
+      margin-top: 1em;
+      @include respond($mob) {
+        font-size: 0.875em;
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.pageContainer.pageContainer {
+  @media only screen and (max-width: $xs) {
+    padding: 0 1em;
+  }
+
+  @media only screen and (max-width: $xxs) {
+    padding: 0 0.5em;
+  }
+}
+
+.contentWrap {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  width: 100%;
+  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.loanButton.loanButton {
+  max-width: 386px;
+  height: 76px;
+  color: $white;
+  font-size: 1.5em;
+  margin: 1.5em auto 0;
+  @media only screen and (max-width: $sm) {
+    margin: 0.85em auto 0;
+  }
+}
+
+.prize {
+  display: flex;
+  width: 100%;
+  padding: 4em 12em;
+  column-gap: 2.5em;
+  align-items: center;
+  @include respond(1360px) {
+    padding: 4em 3em;
+  }
+  @include respond($mob) {
+    margin-top: 1em;
+    flex-direction: column;
+    padding: 0;
+    row-gap: 1em;
+  }
+
+  &Text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    font-size: 1.5em;
+    font-weight: 400;
+    line-height: 140%;
+    text-align: right;
+    color: $abyssalBlue;
+
+    p {
+      color: $orange;
+      font-size: 2.25em;
+      font-weight: 400;
+      line-height: 98%;
+      font-family: 'Kaushan Script', cursive;
+      margin-top: 0.25em;
+    }
+
+    @include respond($mob) {
+      width: 100%;
+      font-size: 1em;
+      text-align: center;
+    }
+  }
+
+  &Image {
+    width: 50%;
+    @include respond($mob) {
+      width: 80%;
+      text-align: center;
+    }
+  }
+}
+
+.title {
+  font-size: 2.5em;
+  font-style: italic;
+  font-weight: 800;
+  color: $abyssalBlue;
+  text-transform: uppercase;
+  text-align: center;
+  @include respond($mob) {
+    font-size: 1.5em;
+  }
+}
+
+.howToGet {
+  margin-top: 3em;
+  display: flex;
+  flex-direction: column;
+  @include respond($mob) {
+    margin-top: 2.5em;
+  }
+
+  .descriptionList {
+    display: flex;
+    column-gap: 2em;
+    margin-top: 1.5em;
+    @include respond($mob) {
+      flex-direction: column;
+      row-gap: 1.5em;
+    }
+  }
+
+  .description {
+    display: flex;
+    width: 100%;
+    background-color: $abyssalBlue;
+    border-radius: 24px;
+    padding: 2.25em 0;
+    @include respond($mob) {
+      flex-direction: column;
+      padding: 1.5em;
+      align-items: center;
+    }
+
+    &Wrap {
+      width: 100%;
+    }
+
+    &Image {
+      display: flex;
+      width: 40%; //100%;
+      max-width: 250px;
+      // flex-shrink: 0;
+      height: 100%;
+      @include respond($mob) {
+        width: 100%;
+        max-width: 173px;
+      }
+    }
+    &Text {
+      display: flex;
+      width: 60%;
+      align-items: center;
+      font-size: 1.25em;
+      color: $orange;
+      line-height: 157%;
+      padding-right: 3em;
+      @include respond($mob) {
+        width: 100%;
+        padding-right: 0;
+        font-size: 1em;
+      }
+    }
+  }
+
+  &List {
+    display: flex;
+    width: 100%;
+    column-gap: 2.25em;
+    margin-top: 5.5em;
+    padding: 0 4.75em;
+    border-top: 1px solid $orange;
+    @include respond($mob) {
+      flex-direction: column;
+      margin-top: 3.375em;
+      padding: 0;
+    }
+
+    .itemWrap {
+      width: 100%;
+      position: relative;
+
+      &:before {
+        content: '';
+        display: block;
+        position: relative;
+        width: 28px;
+        height: 28px;
+        background: url('/images/vespa-contest/mark.png') no-repeat;
+        left: calc(50% - 14px);
+        top: -14px;
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 1px;
+        height: 50%; //100%;
+        left: 50%;
+        top: 0;
+        background-color: $orange;
+        z-index: -1;
+      }
+
+      @include respond($mob) {
+        &:not(:first-child) {
+          margin-top: 1.5em;
+          &:before {
+            top: 6px;
+          }
+        }
+        &:not(:last-child) {
+          &:after {
+            height: 150%;
+          }
+        }
+      }
+    }
+
+    .item {
+      display: flex;
+      width: 100%;
+      background-color: $abyssalBlue;
+      border-radius: 24px;
+      padding: 1.375em 0;
+      margin-top: 2.25em;
+      @include respond($mob) {
+        padding: 0.5em 0.75em;
+        column-gap: 1.25em;
+      }
+
+      &Image {
+        display: flex;
+        width: 37.5%; //100%;
+        max-width: 132px;
+        height: 100%;
+        // flex-shrink: 0;
+        @include respond($mob) {
+          max-width: 88px;
+        }
+      }
+      &Text {
+        display: flex;
+        width: 62.5%;
+        align-items: center;
+        font-size: 1em;
+        color: $orange;
+        line-height: 140%;
+        padding-right: 1em;
+        @include respond($mob) {
+          font-size: 0.875em;
+        }
+      }
+    }
+  }
+
+  .footnote {
+    margin-top: 3.1em;
+    padding: 0 5em;
+
+    a {
+      color: $abyssalBlue;
+      &:hover {
+        font-weight: bolder;
+      }
+    }
+
+    @include respond($mob) {
+      margin-top: 1.67em;
+      padding: 0;
+    }
+  }
+
+  .buttonWrap {
+    margin-top: 3.33em;
+    @include respond($mob) {
+      margin-top: 1.67em;
+    }
+  }
+}
+
+.applyNow {
+  display: flex;
+  margin-top: 4em;
+  background-color: $abyssalBlue;
+  border-radius: 24px;
+  align-items: center;
+  @include respond($mob) {
+    flex-direction: column;
+    row-gap: 2em;
+    padding: 2em 0;
+    margin-top: 3em;
+  }
+
+  &Text {
+    width: 100%;
+    color: $orange;
+    font-size: 2.5em;
+    font-weight: 800;
+    font-style: italic;
+    padding: 0 2.3em;
+    text-align: center;
+    @include respond($mob) {
+      font-size: 1.5em;
+      padding: 0 0.6em;
+    }
+  }
+
+  &Image {
+    width: 100%;
+    max-width: 498px;
+    margin-right: 1.5em;
+    @include respond($mob) {
+      margin-right: 0;
+    }
+  }
+}
+
+.youtubeWrap {
+  margin-top: 5em;
+  @media only screen and (max-width: $sm) {
+    margin-top: 2.5em;
+  }
+}
+
+.ytiframe {
+  width: 100%;
+  height: 319px;
+  max-width: 562px;
+  max-height: 319px;
+  @media only screen and (max-width: $xs) {
+    height: 173px;
+    max-height: 173px;
+    max-width: 304px;
+  }
+}
+
+.winner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.875em;
+  width: 100%;
+  min-width: 934px;
+  height: 100%;
+  min-height: 510px;
+  background: transparent url('/images/vespa-contest/vespa_salut.png') center /
+    contain no-repeat;
+
+  @include respond($mob) {
+    margin-top: 1.5em;
+    min-width: 0;
+    min-height: 258px;
+  }
+
+  @media only screen and (max-width: $xs) {
+    background-size: cover;
+    background-position-x: 67%;
+  }
+
+  :global .tag_bolder {
+    font-size: 1.2em;
+  }
+
+  &Title {
+    margin-top: 2.75em;
+    max-width: 594px;
+  }
+
+  &Text {
+    position: absolute;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 381px;
+    height: 100%;
+    max-height: 381px;
+    background: transparent url('/images/vespa-contest/winner.png') center /
+      contain no-repeat;
+    color: $orange;
+    font-size: 1.5em;
+    top: 13%;
+    left: 40%;
+    margin-left: calc(21% / 2);
+    padding: 4em;
+    @include respond($mob) {
+      max-width: 192px;
+      max-height: 192px;
+      font-size: 0.85em;
+    }
+    @media only screen and (max-width: $xs) {
+      margin-left: calc(13% / 2);
+    }
+
+    .questionMark {
+      font-size: 5.25em;
+      font-weight: 700;
+
+      @include respond($mob) {
+        font-size: 4em;
+      }
+    }
+
+    p {
+      margin-top: 0.75em;
+      font-weight: 700;
+      word-spacing: 9999999px;
+    }
+  }
+}
+
+.postpromo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 4.625em;
+  @include respond($mob) {
+    margin-top: 2.875em;
+  }
+
+  .imgWrap {
+    display: flex;
+    column-gap: 2em;
+    @include respond($md) {
+      flex-direction: column;
+      row-gap: 0.8em;
+      max-width: 624px;
+    }
+  }
+
+  .txtWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 3em;
+    @include respond($mob) {
+      margin-top: 2em;
+    }
+  }
+
+  .subTitle {
+    font-size: 2.5em;
+    font-weight: 700;
+    font-style: italic;
+    color: $abyssalBlue;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 0.6em;
+    @include respond($mob) {
+      font-size: 2em;
+      margin-top: 0.5em;
+      br {
+        display: inline-block;
+      }
+    }
+  }
+
+  .youtubeWrap {
+    margin-top: 2.5em;
+  }
+}
+
+.termsTitle {
+  font-size: 1em;
+  margin-top: 3.5em;
+  text-align: center;
+  color: $abyssalBlue;
+  @media only screen and (max-width: $sm) {
+    margin-top: 2.5em;
+  }
+
+  a {
+    color: $abyssalBlue;
+    text-decoration: underline;
+    &:hover {
+      font-weight: 700;
+    }
+  }
+}
+
+.toUpperCase {
+  text-transform: uppercase;
+}
+
+.footerWrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 3em 0;
+  margin-top: 2.25em;
+  background-color: $abyssalBlue;
+  border-radius: 24px;
+  @include respond($mob) {
+    margin-top: 1.25em;
+    padding: 2.25em 1.875em;
+  }
+}
+
+.footer {
+  color: $orange;
+  max-width: 410px;
+  @media only screen and (max-width: $sm) {
+    font-size: 0.875em;
+    line-height: 140%;
+  }
+
+  a {
+    color: $orange;
+    text-decoration: underline;
+    &:hover {
+      font-weight: 700;
+    }
+  }
+}

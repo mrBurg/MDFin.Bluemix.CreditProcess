@@ -1,0 +1,113 @@
+{
+  "domain": "horacredit.ro",
+  "siteName": "Hora Credit",
+
+  "locales": ["ro-RO", "ro-EN"],
+  "defaultLocale": "ro-RO",
+  "defaultLocaleDomain": "common",
+
+  "alphabet_uppercase": "A\u0102\u00C2BCDEFGHI\u00CEJKLMNOPQRS\u0218\u015ET\u021A\u0162UVWXYZ",
+  "alphabet_lowercase": "a\u0103\u00E2bcdefghi\u00EEjklmnopqrs\u0219\u015F\u0163t\u021Buvwxyz",
+  "alphabet_vns": "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZzĂaàáạảãăăằắặẳẵââầấậẩẫĐđeèéẹẻẽÊêêềếệểễiìíịỉĩÔoòóọỏõôôồốộổỗơờớợởỡƯưuùúụủũưừứựửữyỳýỵỷỹ",
+  "diacriticLetters": "ĂăÂâȘșȚț",
+
+  "phoneMask": "+40799999999",
+  "otherPhoneMask": "+40799999999",
+
+  "pinMask": "9999999999999",
+
+  "dateMask": "99.99.9999",
+  "dateFormat": "dd/MM/yyyy",
+  "shortDateFormat": "DD MMMM",
+  "fullDateFormat": "DD MMMM yyyy",
+  "tinyDateFormat": "DD MMM yyyy",
+  "serverDateFormat": "YYYY-MM-DDTHH:mm:ssZ",
+
+  "otpMask": "9999",
+  "otpFormat": "^\\d{4}$",
+
+  "dealNoMask": "9999-9999",
+
+  "accountMask": "RO** **** **** **** **** ****",
+  "accountNumberFormat": "^.{6,22}$",
+
+  "maskChar": "",
+
+  "emailFormatOrigin": "/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$/",
+  "emailFormat": "^(([^<>()[\\]\\.,;:\\s@\"\u00b2\u00b3\u2070-\u2094\u0430-\u044f\u0410-\u042f]+(\\.[^<>()[\\]\\.,;:\\s@\"\u00b2\u00b3\u2070-\u2094\u0430-\u044f\u0410-\u042f]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([^\u00b2\u00b3\u2070-\u2094\u0430-\u044f\u0410-\u042f][a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,}))$",
+
+  "passportFormat": "^(([a-zA-ZĂÂÎȘŞȚăâîșşţț]){2}\\s*(\\s*?[0-9]){6})$",
+
+  "birthDateFormat": "^(\\d{2}.){2}\\d{4}$",
+
+  "paymentAmountFormat": "^(?=[.,]*\\d)?\\d*(?:[.,]\\d{0,2})?$",
+  "minPaymentAmount": 0.01,
+  "maxCharsPaymentAmount": 12,
+
+  "slug": "\\[(.+)\\]",
+  "showResend": 30000,
+  "allowedFileTypes": [
+    ".gif",
+    ".jpg",
+    ".jpeg",
+    ".png",
+    ".pdf",
+    ".bmp",
+    ".tiff",
+    ".doc"
+  ],
+  "maxImageFileSize": 20971520,
+  "refreshViewTime": 60000,
+  "ga": {
+    "test": { "trackingId": "UA-72867702-2" },
+    "prod": { "trackingId": "UA-72867702-3", "deactivated": true }
+  },
+  "ga4": {
+    "test": "G-4MR93J3GG4"
+  },
+  "gtm": {
+    "prod": "GTM-TMZ5NT8",
+    "test": "GTM-PSJ9TSG"
+  },
+  "baokim": {
+    "test": "baokim3eba7310da026e302d3186292e207d78",
+    "prod": "baokim5b6a127edef32a0422bf4d8e069384f0"
+  },
+  "fb": {
+    "prod": "871623673786858"
+  },
+  "reminderTimeout": 5000,
+  "reminderTemplate": "ThreeRow",
+  "fieldTypes": {
+    "Currency": [
+      "payment",
+      "amount",
+      "extensionAmount",
+      "totalAmount",
+      "lastPaymentAmount"
+    ],
+    "Day": ["term"],
+    "TermFractionDay": ["termD"],
+    "TermFractionMonth": ["termM"],
+    "Date": ["closingDate", "lastPaymentDate"],
+    "ShortDate": ["dateTo", "paymentDate"]
+  },
+  "securedSiteList": [
+    "http://192.168.1.46",
+    "https://192.168.1.46",
+    "http://192.168.1.99",
+    "https://192.168.1.99",
+    "http://192.168.0.100",
+    "https://192.168.0.100",
+    "http://192.168.0.105",
+    "https://192.168.0.105",
+    "http://192.168.1.80",
+    "https://192.168.1.80"
+  ],
+  "documentResend": 30000,
+  "googlePlayUrl": "https://play.google.com/store/apps/details?id=com.mdfin.horacredit",
+  "appStoreUrl": "https://apps.apple.com/ua/app/horacredit/id6449424064",
+  "promotionCode": "^.{32}$",
+  "notificationDelay": 500,
+  "viewport": "width=device-width, initial-scale=1.0, maximum-scale=2.0"
+}

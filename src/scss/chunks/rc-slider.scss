@@ -1,0 +1,71 @@
+.rc-slider {
+  padding: 5px 0;
+
+  &-rail {
+    background-color: $gray-light;
+  }
+
+  &-track {
+    background-color: $orange;
+  }
+
+  &-handle {
+    background-color: $orange;
+    cursor: grab;
+    border: none;
+    width: 32px;
+    height: 32px;
+    transform: translate(-50%, calc(-50% + 5px)) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      border: 5px solid transparent;
+      border-top-width: 3px;
+      border-bottom-width: 3px;
+      width: 0;
+      height: 0;
+      margin: 3px;
+    }
+
+    &:before {
+      border-right-color: $white;
+      border-left: 0;
+    }
+
+    &:after {
+      border-left-color: $white;
+      border-right: 0;
+    }
+  }
+
+  &-mark {
+    &-text {
+      white-space: nowrap;
+      font-size: 1.3em;
+
+      &:first-child {
+        transform: translateX(0%) !important;
+      }
+
+      &:last-child {
+        transform: translateX(-100%) !important;
+      }
+    }
+  }
+
+  &-dot {
+    background-color: transparent;
+    border-color: $gray;
+    border-width: 1px;
+
+    &:first-child,
+    &:last-child {
+      display: none;
+    }
+  }
+}

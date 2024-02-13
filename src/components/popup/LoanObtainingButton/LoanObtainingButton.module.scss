@@ -1,0 +1,67 @@
+@import '@scss/service';
+
+.loanObtaining {
+  background-color: transparentize($black, 0.7);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: none;
+  max-height: 0;
+  transition: all 0.2s;
+  z-index: 10;
+
+  .holder {
+    padding: 1em;
+  }
+
+  &.show {
+    display: block;
+  }
+
+  &[class~='slideUp'] {
+    max-height: 5em;
+  }
+
+  // & &Button {
+  .button {
+    @extend %button-gray;
+    padding: 0.3em 1em;
+    font-size: 1.5em;
+    width: auto;
+    margin: auto;
+    min-width: 17.5em;
+
+    @include respond(lg) {
+      width: 50%;
+    }
+
+    @include respond(md) {
+      width: 100%;
+      min-width: auto;
+    }
+  }
+}
+
+.redesign {
+  background-color: $white;
+
+  .holder {
+    display: flex;
+    padding: 0; //24px;
+    height: 104px;
+    @include respond(sm) {
+      padding: 0 16px; //16px;
+      height: 88px;
+    }
+  }
+
+  &[class~='slideUp'] {
+    max-height: 104px;
+  }
+
+  // & &Button {
+  .button.button {
+    @extend %button-gradient;
+  }
+}

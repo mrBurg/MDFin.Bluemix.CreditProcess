@@ -1,0 +1,46 @@
+@import '@scss/service';
+@import '../Client.module.scss';
+
+.photoUpload {
+  @extend .clientForm;
+
+  .button {
+    margin: 2em auto 0;
+
+    &_or {
+      margin: 0.5em auto 0;
+    }
+
+    &Submit {
+      margin-top: 0.7em;
+    }
+  }
+}
+
+.image {
+  display: block;
+  width: 100%;
+  margin: 1.2em auto;
+  &.ID {
+    max-width: 300px;
+  }
+  &.Selfie {
+    max-height: 250px;
+  }
+}
+
+.orText {
+  text-align: center;
+  margin: 0.55em 0;
+}
+
+.indentBlock {
+  //max-width: 420px;
+  min-height: 2.25em;
+  margin: 0.7em auto 0;
+  text-align: justify;
+}
+
+.errorText {
+  color: $red;
+}

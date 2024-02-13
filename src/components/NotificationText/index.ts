@@ -1,0 +1,1 @@
+export { NotificationText } from './NotificationText';

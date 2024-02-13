@@ -1,0 +1,114 @@
+@import '@scss/service';
+$mob: 640px;
+
+.popup {
+  border-radius: 3px;
+  box-shadow: $box-shadow;
+  box-sizing: border-box;
+  background-color: $white;
+  min-width: 300px;
+  padding: 3em;
+  position: relative;
+  text-align: center;
+  width: 420px;
+  font-size: 1em;
+
+  @include respond($mob) {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  &__holder {
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+  }
+
+  &__buttons {
+    margin-top: 1.25em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .button {
+      margin: 0 0.5em;
+      min-width: 200px;
+      width: 100%;
+      text-transform: uppercase;
+
+      &:first-child {
+        margin-bottom: 1.2em;
+
+        @include respond($mob) {
+          margin-bottom: 0.5em;
+        }
+      }
+    }
+  }
+
+  &__close {
+    background: transparent url('/theme/icons/icons_20x20.svg') -120px 0 no-repeat;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 10px;
+    right: 10px;
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.redesign {
+  width: 328px;
+  padding: 40px 24px;
+
+  .popup {
+    &__close {
+      top: 8px;
+      right: 8px;
+    }
+
+    &__text {
+      margin-top: 8px;
+      color: $re-gray-dark;
+    }
+
+    &__buttons {
+      margin-top: 8px;
+
+      .button {
+        text-transform: none;
+        max-width: 216px;
+
+        &:first-child {
+          font-size: 20px;
+          padding: 16px 24px;
+          margin-bottom: 8px;
+          &:hover {
+            background: $re-blue-dark;
+          }
+        }
+        &:last-child {
+          font-size: 16px;
+          color: $re-blue;
+          text-decoration: underline !important;
+          &:hover {
+            color: $re-blue-dark;
+          }
+        }
+      }
+    }
+  }
+}

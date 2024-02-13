@@ -1,0 +1,39 @@
+@import '@scss/service';
+
+button {
+  &.loanButton {
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    // border: 0.1em solid $orange-dark;
+    border: 3px solid $orange-dark;
+    max-width: 320px;
+    background: linear-gradient(
+      $orange-light,
+      $orange 45%,
+      $orange-dark 55%,
+      $orange
+    );
+    box-shadow: 0.1em 0.1em 0.3em transparentize($black, 0.7);
+    padding: 0.5em 1em;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    width: 100%;
+
+    &:hover:not(:disabled) {
+      background: linear-gradient(#eabf2e, #e8b503 45%, #cea114 55%, #ce9c02);
+    }
+
+    svg {
+      &:first-child {
+        margin-right: 4px;
+      }
+      &:last-child {
+        margin-left: 4px;
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@import '@scss/service';
+
+.inputAutocompleteWidget {
+  position: relative;
+  display: inline-block;
+
+  .input {
+    &Field {
+      width: 100%;
+    }
+
+    &Select {
+      position: absolute;
+      width: 100%;
+
+      :global .select-widget__control {
+        display: none;
+      }
+    }
+  }
+}

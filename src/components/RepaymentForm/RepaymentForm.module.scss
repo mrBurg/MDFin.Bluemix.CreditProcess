@@ -1,0 +1,137 @@
+@import '@scss/service';
+
+@mixin input {
+  .input {
+    background-color: transparent;
+
+    @include respond(getSize(md)) {
+      text-align: center;
+    }
+
+    &Widget {
+      @include respond(getSize(md)) {
+        width: 100%;
+      }
+
+      &:disabled {
+        @extend .inputWidget;
+      }
+    }
+
+    &:disabled {
+      @extend .input;
+    }
+  }
+}
+
+.repaymentForm {
+  max-width: $sm;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+
+  @include respond(md) {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  @include respond(sm) {
+    font-size: 0.88em;
+  }
+
+  .button {
+    @extend %button;
+    border: 2px solid $green;
+    font-size: 1.5em;
+    background: linear-gradient(
+      $green-light,
+      $green-light 45%,
+      $green-dark 55%,
+      $green
+    );
+    color: $white;
+    font-weight: bold;
+    padding: 0.6em 5em;
+    margin-left: 2.2em;
+
+    @include respond(md) {
+      margin: 0;
+      margin-top: 0.5em;
+    }
+
+    @include respond(xs) {
+      width: 100%;
+    }
+
+    &:hover:not(:disabled) {
+      background: linear-gradient(
+        $green,
+        $green 45%,
+        $green-dark 55%,
+        $green-dark
+      );
+    }
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+
+  @include respond(getSize(lg)) {
+    flex-direction: column;
+  }
+
+  @include input;
+}
+
+.headerItem {
+  @include respond(xs) {
+    width: 100%;
+  }
+}
+
+.title {
+  margin-right: 1em;
+
+  @include respond(getSize(lg)) {
+    margin: 0 0 0.5em;
+    width: 100%;
+  }
+
+  @include respond(getSize(md)) {
+    display: none;
+  }
+}
+
+@include input;
+
+.isRepayment {
+  @include respond(getSize(lg)) {
+    flex-direction: row;
+  }
+
+  @include respond(md) {
+    flex-direction: column;
+  }
+
+  .headerItem {
+    width: 100%;
+
+    @include respond(md) {
+      text-align: center;
+    }
+  }
+
+  .title {
+    margin: 0;
+
+    @include respond(md) {
+      display: block;
+    }
+  }
+}
+
+.repayment {
+  margin: 1em auto 0.5em;
+}

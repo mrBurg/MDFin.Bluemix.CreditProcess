@@ -1,0 +1,26 @@
+@import '@scss/service';
+
+.youtubeWrap {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.ytiframe {
+  width: 100%;
+  max-width: 562px;
+  height: 316px;
+  max-height: 316px;
+  border: none;
+
+  //@media only screen and (max-width: $sm) {
+  @include respond($sm) {
+    height: 184px;
+    max-height: 184px;
+    max-width: 328px;
+  }
+}
+
+.svgTile {
+  position: relative;
+}

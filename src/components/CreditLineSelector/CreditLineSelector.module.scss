@@ -1,0 +1,13 @@
+@import '@scss/service';
+
+.selector {
+  &Title {
+    margin: 2em 0 1em;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .slider {
+    padding-bottom: 2em;
+  }
+}

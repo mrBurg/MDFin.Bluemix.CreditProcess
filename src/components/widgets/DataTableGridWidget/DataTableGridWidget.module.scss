@@ -1,0 +1,67 @@
+@import '@scss/service';
+
+.container {
+  border: 1px solid $gray-light;
+  @extend %shadow;
+  box-sizing: border-box;
+  max-width: 35em;
+  padding: 1.34em 1em;
+
+  &_noborder {
+    @extend .container;
+    border: none;
+  }
+
+  .title {
+    color: $gray-dark;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1.4em;
+  }
+
+  .datatable {
+    font-size: 0.9em;
+    font-weight: bold;
+    border-collapse: collapse;
+    margin-top: 1em;
+    table-layout: fixed;
+    width: 100%;
+
+    tr {
+      border-bottom: 1px solid $gray-light;
+      @include respond(xs) {
+        display: grid;
+      }
+
+      td {
+        padding: 0.8em 0.75em;
+        @include respond(xs) {
+          text-align: center;
+          padding: 0.4em 0.75em;
+        }
+
+        &:nth-child(2n + 1) {
+          color: $gray;
+        }
+
+        &:nth-child(2n) {
+          color: $gray-dark;
+        }
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    a {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    &_title {
+      text-align: right;
+    }
+  }
+}

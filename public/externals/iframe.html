@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PartnerIframe</title>
+    <script src="/libs/external_tracking.js?noframe=1"></script>
+  </head>
+  <body>
+    <script>
+      if (globalThis.top == globalThis.self) {
+        globalThis.location.replace('iframe');
+      }
+
+      function messageHandler(event) {
+        let counter = 100;
+
+        (function next() {
+          counter--;
+
+          setTimeout(() => {
+            const externalSessionID = et.getFromStorage(et.sessionKey);
+
+            if (externalSessionID) {
+              event.source.postMessage({ externalSessionID }, event.data);
+
+              return window.removeEventListener('message', messageHandler);
+            }
+
+            if (counter) {
+              return next();
+            }
+
+            window.removeEventListener('message', messageHandler);
+          }, 100);
+        })();
+      }
+
+      window.addEventListener('message', messageHandler);
+    </script>
+  </body>
+</html>

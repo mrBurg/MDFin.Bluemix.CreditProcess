@@ -1,0 +1,30 @@
+@import '@scss/service';
+
+$mob: $sm;
+
+.tagsCloud {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 8px;
+  row-gap: 8px;
+}
+
+.tag {
+  // border: 1px solid $blue;
+  border: 1px solid $re-gray;
+  border-radius: 8px;
+  background-color: $re-gray-light;
+  padding: 16px;
+  @include respond($mob) {
+    font-size: 12px;
+    padding: 12px;
+  }
+
+  &:hover,
+  &:active {
+    color: $white;
+    background-color: $blue;
+  }
+}

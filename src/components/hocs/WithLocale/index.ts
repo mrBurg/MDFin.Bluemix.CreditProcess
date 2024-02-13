@@ -1,0 +1,1 @@
+export { WithLocale } from './WithLocale';

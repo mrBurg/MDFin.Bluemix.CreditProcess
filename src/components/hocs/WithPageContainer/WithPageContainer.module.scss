@@ -1,0 +1,11 @@
+@import '@scss/service';
+
+.pageContainer {
+  padding: 0 2.19em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2.5em;
+  flex-grow: 1;
+}

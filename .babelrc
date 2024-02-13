@@ -1,0 +1,25 @@
+{
+  "presets": ["next/babel"],
+  "plugins": [
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    [
+      "module-resolver",
+      {
+        "root": ["./"],
+        "alias": {
+          "@context": ["src/context"],
+          "@components": "./src/components",
+          "@interfaces": "./src/interfaces",
+          "@libs": "./src/libs",
+          "@routes": "./src/routes",
+          "@scss": "./src/scss",
+          "@stores": "./src/stores",
+          "@stores-types": ["./src/stores/@types"],
+          "@utils": "./src/utils",
+          "@src": "./src",
+          "@root": "./"
+        }
+      }
+    ]
+  ]
+}

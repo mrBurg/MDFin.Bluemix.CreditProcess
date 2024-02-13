@@ -1,0 +1,97 @@
+@import '@scss/service';
+
+$mob: $sm;
+$tab: $xxs, $xl;
+
+.cookiesWrap {
+  z-index: 10;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  right: 80px;
+  width: calc(100vw - 584px);
+  max-width: 788px;
+  min-height: 185px;
+  align-items: center;
+  @include respond($tab) {
+    width: 100%;
+    right: 0;
+    max-width: none;
+    min-height: 0;
+  }
+}
+
+.cookies {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  padding: 16px;
+  color: $re-gray-dark;
+  background-color: $re-gray-light;
+  border: 1px solid $re-blue;
+  column-gap: 16px;
+  @include respond($tab) {
+    flex-direction: column;
+    row-gap: 16px;
+  }
+
+  .link {
+    color: $re-blue;
+    text-decoration: underline;
+    &:hover {
+      color: $re-blue-dark;
+    }
+  }
+
+  .buttonWrap {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    @include respond($tab) {
+      width: 100%;
+      flex-direction: row;
+      column-gap: 16px;
+      justify-content: left;
+    }
+  }
+
+  .button {
+    font-size: 16px;
+    font-weight: 700;
+    padding: 8px;
+    background: $re-blue;
+    color: $white;
+    border: 1px solid $re-blue;
+    border-radius: 4px;
+    box-shadow: none;
+
+    &:hover:not(:disabled) {
+      background: $re-blue-dark;
+      color: $white;
+    }
+
+    &Cancel {
+      @extend .button;
+      color: $re-blue;
+      background: transparent;
+    }
+  }
+
+  .close {
+    display: inline-block;
+    background: transparent url('/theme/icons/icons_20x20.svg') -122px -2px
+      no-repeat;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    top: 8px;
+    right: 8px;
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: rotate(90deg);
+    }
+  }
+}

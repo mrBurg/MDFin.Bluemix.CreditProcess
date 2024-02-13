@@ -1,0 +1,39 @@
+@import '@scss/service/';
+$mob: 960px;
+
+.deal {
+  max-width: 420px;
+  width: 100%;
+  padding-top: 1.25em;
+}
+
+.notification {
+  text-align: center;
+  font-size: 1.1em;
+  margin-bottom: 1em;
+}
+
+.actions {
+  &__holder {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    flex-shrink: 0;
+    width: 100%;
+  }
+}
+
+.info {
+  margin-top: 4em;
+}
+
+.button {
+  @extend %button;
+  margin-top: 0.68em;
+  width: 100%;
+  text-transform: uppercase;
+
+  @include respond(sm) {
+    max-width: none;
+  }
+}

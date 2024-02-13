@@ -1,0 +1,12 @@
+@import '@scss/service';
+
+.paymentForm {
+  max-width: $sm;
+  width: 100%;
+
+  @include respond(sm) {
+    font-size: 0.88em;
+    flex-direction: column;
+    max-width: 27.86em;
+  }
+}

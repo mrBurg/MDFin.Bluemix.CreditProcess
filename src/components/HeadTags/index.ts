@@ -1,0 +1,1 @@
+export { HeadTags } from './HeadTags';

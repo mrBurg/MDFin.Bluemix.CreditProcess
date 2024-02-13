@@ -1,0 +1,66 @@
+@import '@scss/service';
+
+.input {
+  @extend %input;
+
+  border-radius: 10px;
+  padding: 1.45em 1.13em 0.75em;
+  width: 100%;
+  text-align: center;
+  letter-spacing: px2em(8px);
+}
+
+.error {
+  border-color: $red;
+}
+
+.agree_terms {
+  margin: px2em(20px) auto;
+  display: flex;
+  align-items: flex-start;
+}
+
+.agree_text {
+  text-align: justify;
+
+  .link {
+    color: $blue;
+  }
+}
+
+.resend {
+  padding: 0 px2em(30px);
+
+  .item {
+    margin-top: px2em(15px);
+  }
+}
+
+.message {
+  color: lighten($red, 25%);
+}
+
+.button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: $blue;
+}
+
+.testOtp {
+  @extend %shadow;
+  pointer-events: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+  background-color: $yellow;
+  font-size: 3em;
+  font-weight: bold;
+  letter-spacing: px2em(4px);
+  z-index: 999;
+  color: $red;
+  animation: fade-out 0.2s linear 5s forwards;
+}

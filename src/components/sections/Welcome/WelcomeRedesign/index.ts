@@ -1,0 +1,1 @@
+export { WelcomeRedesign } from './WelcomeRedesign';

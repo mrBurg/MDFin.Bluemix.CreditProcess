@@ -1,0 +1,23 @@
+@import '@scss/service';
+
+.slider {
+  position: relative;
+  height: 0.88em;
+  width: 100%;
+  border-radius: 6px;
+  touch-action: none;
+  box-sizing: border-box;
+
+  &Panel {
+    padding: 1em 0;
+  }
+
+  &Amount {
+    text-align: center;
+    font-size: 1.5em;
+  }
+
+  :global .rc-slider-handle {
+    opacity: 0.95;
+  }
+}

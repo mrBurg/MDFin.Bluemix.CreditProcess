@@ -1,0 +1,1 @@
+export { BonusPromotionYear } from './BonusPromotionYear';

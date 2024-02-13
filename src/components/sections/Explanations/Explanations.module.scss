@@ -1,0 +1,46 @@
+@import '@scss/service';
+
+.section {
+  width: 100%;
+  background-color: $blue;
+  color: $white;
+}
+
+.content {
+  max-width: $xl;
+  margin: auto;
+  padding: 0.5em;
+}
+
+.item {
+  margin: 0.7em 0;
+  font-weight: 300;
+
+  @include respond(xs) {
+    font-size: 0.75em;
+  }
+
+  &Title {
+    font-weight: bold;
+  }
+
+  &Text {
+    text-align: justify;
+
+    a {
+      color: $red;
+    }
+    a:hover {
+      color: $red-misty;
+    }
+  }
+}
+
+.text {
+  color: $gray;
+  font-size: 1.5em;
+}
+
+.link {
+  font-weight: bold;
+}

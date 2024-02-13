@@ -1,0 +1,81 @@
+@import '@scss/service';
+$mob: $md;
+
+.section {
+  width: 100%;
+}
+
+.content {
+  padding: 40px 16px;
+  @include respond($mob) {
+    padding: 24px 16px;
+  }
+}
+.background {
+  max-width: 872px; //$lg;
+  display: flex;
+  column-gap: 40px;
+  align-items: center;
+  margin: auto;
+
+  border-radius: 8px;
+  background-color: $re-blue;
+  padding: 52px 96px;
+  @include respond($mob) {
+    padding: 24px;
+    flex-direction: column-reverse;
+  }
+}
+
+.qrcodeWrap {
+  display: flex;
+  line-height: 0;
+
+  .qrcode {
+    @include respond($mob) {
+      display: none;
+    }
+  }
+}
+
+.infoWrap {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  @include respond($mob) {
+    align-items: center;
+  }
+
+  .text {
+    @include respond($mob) {
+      text-align: center;
+    }
+  }
+
+  .title {
+    font-size: 32px;
+    font-weight: 700;
+    color: $orange;
+    @include respond($mob) {
+      font-size: 24px;
+    }
+  }
+
+  .subTitle {
+    font-size: 24px;
+    color: $orange;
+    @include respond($mob) {
+      font-size: 20px;
+    }
+  }
+}
+
+.buttonsWrap {
+  display: flex;
+  column-gap: 16px;
+  line-height: 0;
+  @include respond($mob) {
+    flex-direction: column;
+    row-gap: 8px;
+  }
+}

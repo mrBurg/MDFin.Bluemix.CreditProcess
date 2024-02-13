@@ -1,0 +1,19 @@
+@import '@scss/service';
+
+.checkbox {
+  font-size: 1em;
+
+  label {
+    &:before {
+      border: 1px solid $blue;
+    }
+  }
+}
+
+.error {
+  label {
+    &:before {
+      border-color: $red;
+    }
+  }
+}

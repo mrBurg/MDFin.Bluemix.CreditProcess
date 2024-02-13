@@ -1,0 +1,1 @@
+export { Ekyc } from './Ekyc';

@@ -1,0 +1,1 @@
+export { ReactSelectWidget } from './ReactSelectWidget';

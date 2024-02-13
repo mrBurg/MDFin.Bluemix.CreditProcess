@@ -1,0 +1,56 @@
+@import '@scss/service';
+
+.dealInfo {
+  @extend %shadow;
+
+  background-color: $white;
+}
+
+.datatable {
+  border-spacing: 0 px2em(15px);
+  width: 100%;
+  padding: px2em(15px) px2em(40px);
+
+  thead {
+    font-size: px2em(20px);
+  }
+
+  tbody {
+    font-size: px2em(14px);
+
+    td {
+      &:first-child {
+        color: $gray;
+      }
+
+      &:last-child {
+        text-align: right;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.agreement {
+  display: flex;
+  text-align: center;
+  padding: 0 px2em(40px);
+  font-weight: bold;
+
+  span {
+    flex-grow: 1;
+
+    &:last-child {
+      color: $red;
+    }
+  }
+}
+
+.button {
+  @extend %button;
+  background-color: $red;
+  max-width: px2em(230px);
+  width: 100%;
+  display: block;
+  margin: px2em(30px) auto;
+}

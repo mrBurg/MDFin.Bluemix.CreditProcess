@@ -1,0 +1,14 @@
+[
+	{
+		"relation": [
+			"delegate_permission/common.handle_all_urls"
+		],
+		"target": {
+			"namespace": "android_app",
+			"package_name": "com.mdfin.horacredit",
+			"sha256_cert_fingerprints": [
+				"90:EE:FF:BD:F9:6E:2A:FB:09:36:60:19:D1:36:94:0E:60:4E:B3:4B:E3:AD:67:6B:9B:84:42:ED:36:05:EB:43"
+			]
+		}
+	}
+]

@@ -1,0 +1,1 @@
+export { AccordionWidgetRedesign } from './AccordionWidgetRedesign';

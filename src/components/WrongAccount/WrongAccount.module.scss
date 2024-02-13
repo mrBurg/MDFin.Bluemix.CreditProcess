@@ -1,0 +1,31 @@
+@import '@scss/service';
+@import '../client/Client.module.scss';
+
+.wrongAccount {
+  @extend .clientForm;
+
+  .button {
+    &Submit {
+      margin-top: 2em;
+    }
+  }
+}
+
+/* .title {
+  margin-top: 2.4em;
+  text-align: center;
+} */
+
+.accounts {
+  max-width: 420px; //$md;
+  margin-top: 1.88em;
+}
+
+/* .submitButton_old {
+  @extend %button;
+  background-color: $red;
+  width: 100%;
+  max-width: 220px;
+  margin: 50px auto;
+  display: block;
+} */

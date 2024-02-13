@@ -1,0 +1,38 @@
+@import '@scss/service';
+@import './../Client.module.scss';
+
+.serviceMessage {
+  margin-top: 0.5em;
+}
+
+.tabs {
+  padding: 0 2.19em;
+  width: 100%;
+}
+
+.obligatory {
+  @extend .clientForm;
+  max-width: $sm;
+
+  &Buttons,
+  &PromoFields {
+    max-width: $xs - 60;
+    margin: auto;
+    margin-top: 2em;
+  }
+}
+
+.link {
+  color: $gray-light;
+  font-size: 0.875em;
+  display: flex;
+  justify-content: center;
+  margin: 0.71em auto 0 auto;
+  background-color: inherit;
+  border: none;
+
+  &:hover:not(:disabled) {
+    background: inherit;
+    color: $gray;
+  }
+}

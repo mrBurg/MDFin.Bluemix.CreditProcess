@@ -1,0 +1,13 @@
+@import '@scss/service';
+
+.notification {
+  background-color: $white;
+  max-width: getSize(md);
+  color: $red;
+  background-color: lighten($red-misty, 25%);
+  border-color: $red-light;
+  border-radius: 3px;
+  font-weight: bold;
+  padding: 1em 2em;
+  font-size: 1.1em;
+}

@@ -1,0 +1,151 @@
+@import '@scss/service';
+
+.title {
+  &Wrap {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    color: $re-blue;
+  }
+
+  &Value {
+    font-weight: 700;
+  }
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+  margin-top: 18px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &Container {
+    [class~='input-widget'] {
+      width: 100%;
+      height: 32px;
+
+      input {
+        padding: 0;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  & &Panel {
+    padding: 14px 18px 4px;
+
+    :global {
+      .rc-slider {
+        display: flex;
+        justify-content: space-between;
+        &::before,
+        &::after {
+          color: $re-yellow;
+          font-size: 18px;
+          font-weight: 700;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          background: $re-blue;
+          width: 24px;
+          height: 24px;
+          margin-top: -10px;
+        }
+      }
+
+      .rc-slider-rail {
+        background-color: $re-gray;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 0;
+        &::before {
+          content: '';
+          margin-left: -18px;
+          background-color: #fe9901;
+          height: 4px;
+          width: 18px;
+        }
+        &::after {
+          content: '';
+          margin-right: -18px;
+          background-color: $re-gray;
+          height: 4px;
+          width: 18px;
+        }
+      }
+
+      .rc-slider-track {
+        background: $yellow-gradient;
+        border-radius: 0;
+      }
+
+      .rc-slider-dot {
+        border-color: $re-gray;
+        background: $white;
+
+        &-active {
+          border-color: $re-blue;
+          background: $re-blue;
+        }
+      }
+
+      .rc-slider-handle {
+        margin-top: -3px;
+        background: url('/theme/icons/handler-icon.svg') no-repeat center;
+        width: 36px;
+        height: 20px;
+        border-radius: 0;
+        opacity: 1;
+        &:before,
+        &:after {
+          display: none;
+        }
+
+        &-dragging {
+          border: none;
+          box-shadow: none;
+        }
+        &:active,
+        &:focus-visible {
+          box-shadow: none;
+        }
+      }
+
+      .rc-slider-mark {
+        top: -32px;
+
+        &-text {
+          font-size: 12px;
+          color: $re-gray-dark;
+
+          &:first-child {
+            // transform: translateX(-18px) !important;
+            transform: none !important;
+            left: -18px !important;
+          }
+          &:last-child {
+            // transform: translateX(-33px) !important;
+            transform: none !important;
+            left: unset !important;
+            right: -18px;
+          }
+        }
+      }
+    }
+  }
+
+  .amount {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 300;
+
+    &Output {
+      color: $gray;
+    }
+  }
+}

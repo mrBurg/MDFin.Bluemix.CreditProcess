@@ -1,0 +1,146 @@
+@import '@scss/service/';
+$tab: $xxs, $xl;
+
+.signIn {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  column-gap: 8px;
+  color: $white;
+  font-size: 20px;
+  font-weight: 700;
+  transition: all 0.2s;
+  border-radius: 8px;
+  padding: 16px 24px;
+  background-color: $re-blue;
+
+  &:hover:not(:disabled) {
+    color: $white;
+    background-color: $re-blue-dark;
+
+    // [class~='stroke'],
+    // [class~='fill'] {
+    //   transition: all 0.2s;
+    // }
+
+    // [class~='stroke'] {
+    //   stroke: $white;
+    // }
+
+    // [class~='fill'] {
+    //   fill: $white;
+    // }
+  }
+  @include respond($tab) {
+    font-size: 16px;
+    padding: 8px;
+    column-gap: 4px;
+    border-radius: 4px;
+  }
+
+  .image {
+    display: flex;
+    @include respond($tab) {
+      max-width: 16px;
+    }
+    @include respond(xxs) {
+      display: none;
+    }
+  }
+}
+
+.actions {
+  // display: flex;
+
+  .signOut {
+    display: flex;
+    border: none;
+    border-radius: 50%;
+    column-gap: 16px;
+    align-items: center;
+    color: $re-gray-dark;
+    padding: 0;
+
+    &:hover:not(:disabled) {
+      background: inherit;
+      color: $re-blue;
+    }
+
+    * {
+      pointer-events: none;
+    }
+  }
+
+  .clientMenu {
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    width: max-content;
+    background-color: $white;
+    list-style: none;
+    padding: 16px;
+    margin-top: 12px;
+    border: 1px solid $re-blue;
+    border-radius: 8px;
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      right: 50%;
+      left: 50%;
+      border: solid transparent;
+    }
+    &:before {
+      top: -18px;
+      border-bottom: solid $re-blue;
+      border-width: 9px;
+    }
+    &:after {
+      top: -16px;
+      border-bottom: solid $white;
+      border-width: 9px;
+    }
+
+    &Holder {
+      position: relative;
+    }
+
+    &Item {
+      display: flex;
+      column-gap: 8px;
+      align-items: center;
+    }
+
+    &Link,
+    &Button {
+      padding: 0;
+      border: none;
+      color: $re-gray-dark;
+      display: block;
+      text-align: left;
+      background-color: transparent;
+      white-space: nowrap;
+    }
+
+    &Button {
+      width: 100%;
+      cursor: pointer;
+
+      &:hover:not(:disabled) {
+        color: $re-blue;
+        text-decoration: underline;
+        background: none;
+      }
+    }
+
+    &Link {
+      &:hover {
+        color: $re-blue;
+        text-decoration: underline;
+      }
+    }
+  }
+}

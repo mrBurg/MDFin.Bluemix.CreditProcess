@@ -1,0 +1,1 @@
+export { Obligatory } from './Obligatory';

@@ -1,0 +1,76 @@
+@import '@scss/service';
+$mob: $md;
+$tab: $xxs, $xl;
+
+.section {
+  width: 100%;
+}
+
+.content {
+  max-width: $xl;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px auto 60px;
+  @include respond($tab) {
+    margin: 40px 8px 20px;
+  }
+}
+
+.image {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.topBox {
+  width: 100%;
+  display: flex;
+  column-gap: 16px;
+  padding: 16px;
+  align-items: center;
+  justify-content: center;
+  background-color: $blue;
+}
+
+.bottomBox {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 80px 36px;
+  background-color: $gray-misty;
+  @include respond($mob) {
+    padding: 16px 16px 24px;
+  }
+}
+
+.title {
+  color: $blue;
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  @include respond($mob) {
+    font-size: 24px;
+  }
+}
+
+.subTitle {
+  color: $white;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  @include respond($mob) {
+    font-size: 18px;
+    text-align: left;
+  }
+}
+
+.description {
+  font-size: 18px;
+  margin-top: 36px;
+  @include respond($mob) {
+    margin-top: 16px;
+  }
+
+  :global .tag_blue {
+    color: $blue;
+  }
+}

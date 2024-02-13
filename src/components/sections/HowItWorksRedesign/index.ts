@@ -1,0 +1,1 @@
+export { HowItWorksRedesign } from './HowItWorksRedesign';

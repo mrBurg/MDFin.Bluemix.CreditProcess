@@ -1,0 +1,137 @@
+@import '@scss/service/';
+
+.serviceMessage {
+  margin-top: 0.5em;
+}
+
+.tabs {
+  padding: 0 2.2em;
+  width: 100%;
+}
+
+.application {
+  max-width: 420px;
+  width: 100%;
+
+  @include respond(md) {
+    max-width: 23.15em;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 1.25em;
+    font-weight: normal;
+    margin-top: 2.5em;
+
+    :global .tag_notificationTitle {
+      + br {
+        margin-bottom: 1em;
+      }
+    }
+
+    br {
+      @include respond(md) {
+        display: none;
+      }
+    }
+  }
+
+  .dealInfo,
+  .loanInfo {
+    width: 100%;
+  }
+
+  .loanInfo {
+    margin-top: 3.75em;
+  }
+
+  .dealInfo {
+    margin-top: 2em;
+  }
+
+  .accounts {
+    margin-top: 2.75em;
+  }
+
+  .policy,
+  .email,
+  .loyaltyCode {
+    margin-top: 2em;
+
+    @include respond(md) {
+      margin-top: 1em;
+    }
+  }
+
+  .accept {
+    width: 100%;
+    margin-top: 1em;
+  }
+
+  .refuse {
+    color: $blue;
+    border: none;
+    font-size: inherit;
+    padding: 0;
+    display: block;
+    margin: auto;
+
+    &:hover {
+      color: $blue;
+      background-color: transparent;
+      text-decoration: underline !important;
+    }
+
+    &Link {
+      border: none;
+      padding: 0;
+      background-color: transparent;
+
+      &:hover {
+        color: inherit;
+        background-color: transparent;
+      }
+    }
+  }
+
+  .or {
+    display: flex;
+    align-items: center;
+    margin: 1.5em 0;
+
+    &:before,
+    &:after {
+      content: '';
+      border: 1px solid $gray-light;
+      flex-grow: 1;
+    }
+
+    &Text {
+      margin: 0 1em;
+    }
+  }
+
+  &Blur {
+    filter: blur(2px);
+  }
+
+  .upsell {
+    margin-top: 2em;
+
+    &Button {
+      color: $blue;
+      padding: 0;
+      border: none;
+      font-weight: bold;
+
+      &:hover {
+        background-color: transparent;
+        color: $blue-dark;
+      }
+    }
+
+    &Text {
+      margin-top: 0.5em;
+    }
+  }
+}

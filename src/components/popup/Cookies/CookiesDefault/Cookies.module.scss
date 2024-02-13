@@ -1,0 +1,31 @@
+@import '@scss/service';
+
+.cookies {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  color: $white;
+  background-color: transparentize($black, 0.4);
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+
+  @include respond(sm) {
+    flex-direction: column;
+  }
+
+  .link {
+    color: $white;
+    text-decoration: underline;
+  }
+
+  .button {
+    @extend %button-gray;
+    margin-left: 0.5em;
+
+    @include respond(sm) {
+      margin-left: 0;
+      margin-top: 0.5em;
+    }
+  }
+}

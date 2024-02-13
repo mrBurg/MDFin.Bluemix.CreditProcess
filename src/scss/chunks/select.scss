@@ -1,0 +1,170 @@
+.select-widget {
+  min-width: 185px;
+  height: 58px;
+
+  // & &__clear-iIndicator {}
+
+  // & &__container {}
+
+  & &__control {
+    cursor: pointer;
+    height: 100%;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    // border-radius: 10px;
+    // border: 1px solid $form-border;
+
+    /* &:after {
+      content: '';
+      height: 2px;
+      background-color: $blue-light;
+      position: absolute;
+      width: 100%;
+      bottom: -1px;
+      transform: scaleX(0);
+      transition: transform 0.2s;
+    } */
+
+    /* &:hover {
+      border-bottom: 1px solid $form-border;
+    } */
+
+    /* &--menu-is-open,
+    &--is-focused {
+      border-bottom: 1px solid $form-border;
+    } */
+
+    &--menu-is-open {
+      /* &:after {
+        transform: scaleX(1);
+      } */
+
+      .select-widget {
+        &__placeholder {
+          position: absolute;
+          left: 0;
+          top: -30%;
+          font-size: 0.75em;
+          // padding-left: 1.5em;
+        }
+
+        &__indicator {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  // & &__dropdown-indicator {}
+
+  /* & &__group {
+    &-heading {}
+  } */
+
+  & &__indicator {
+    &:before {
+      content: '';
+      width: 16px;
+      height: 16px;
+      background: url('/theme/icons/icons_16x16.svg') -48px -64px no-repeat;
+    }
+
+    // &-container{}
+
+    svg {
+      display: none;
+    }
+
+    &-separator {
+      display: none;
+    }
+  }
+
+  // & &__input {}
+
+  /* & &__loading {
+    &-indicator {}
+    &-message {}
+  } */
+
+  & &__menu {
+    margin-top: 0;
+
+    // &-list {}
+    // &-portal {}
+  }
+
+  /* & &__multi {
+    &-value {}
+    &-calue-label {}
+    &-calue-remove {}
+  } */
+
+  // & &__no-options-message {}
+
+  & &__option {
+    cursor: pointer;
+
+    &--is {
+      &-disabled {
+        opacity: 0.7;
+      }
+
+      &-focused {
+        background-color: lighten($gray, 18%);
+      }
+
+      &-selected {
+        background-color: $gray;
+      }
+    }
+  }
+
+  & &__placeholder {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    transition: all 0.2s;
+    top: 0;
+  }
+
+  // & &__single-value {}
+
+  & &__value-container {
+    height: 100%;
+    padding: 1.13em;
+    color: $black;
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    &--has-value {
+      font-weight: 600;
+    }
+  }
+
+  &--has-error {
+    .select-widget {
+      &__control {
+        border-color: $red;
+
+        &:hover {
+          border-color: $red;
+        }
+      }
+
+      &__placeholder,
+      &__indicator {
+        color: $red;
+
+        &:hover {
+          color: $red;
+        }
+      }
+    }
+  }
+}

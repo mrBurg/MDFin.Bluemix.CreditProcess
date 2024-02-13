@@ -1,0 +1,76 @@
+@import '@scss/service';
+
+.accounts {
+  font-size: px2em($font-size);
+
+  @include respond(md) {
+    font-size: 0.9em;
+  }
+
+  @include respond(sm) {
+    font-size: 0.8em;
+  }
+
+  &Form {
+    width: 100%;
+  }
+}
+
+.title {
+  color: $gray;
+  text-align: center;
+  margin: 1em 0;
+  font-size: 1.38em;
+  font-weight: normal;
+}
+
+.select {
+  max-width: px2em(355px);
+  margin-bottom: px2em(30px);
+  margin: auto;
+  margin-bottom: px2em(30px);
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+  @include respond(sm) {
+    flex-direction: column;
+  }
+}
+
+.bankSelect,
+.input {
+  min-width: px2em(250px);
+  max-width: px2em(355px);
+
+  @include respond(sm) {
+    width: 100%;
+  }
+}
+
+.bankSelect {
+  background-color: $orange;
+
+  :global .divider {
+    color: $white;
+  }
+
+  :global .icon {
+    background-position-y: -48px !important;
+  }
+
+  @include respond(sm) {
+    margin-bottom: px2em(30px);
+  }
+}
+
+.input {
+  @extend %input;
+
+  border-radius: 10px;
+  padding: 1.45em 1.13em 0.75em;
+}

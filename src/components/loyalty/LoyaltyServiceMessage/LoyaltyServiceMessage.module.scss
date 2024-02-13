@@ -1,0 +1,32 @@
+@import '@scss/service';
+
+.serviceMessage {
+  background-color: $blue;
+  padding: 0.5em 1em;
+  color: $white;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-align: center;
+  width: 100%;
+  line-height: 1.4em;
+
+  @include respond(sm) {
+    font-size: 0.9em;
+  }
+
+  :global .tag_accent {
+    color: $orange;
+  }
+
+  .copyButton {
+    background: none;
+    border: none;
+    margin: 0 0.5em;
+    vertical-align: sub;
+    padding: 0;
+
+    &:hover {
+      background: none;
+    }
+  }
+}

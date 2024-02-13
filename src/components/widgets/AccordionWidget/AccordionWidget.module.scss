@@ -1,0 +1,77 @@
+@import '@scss/service';
+
+.section {
+  width: 100%;
+  max-width: $xl;
+
+  @include respond(sm) {
+    font-size: px2em(14px);
+  }
+
+  @include respond(xs) {
+    font-size: px2em(12px);
+  }
+}
+
+.title {
+  color: $gray-dark;
+  font-size: px2em(30px);
+  font-weight: normal;
+  text-align: center;
+  margin: px2em(25px, 35px) 0;
+}
+
+.accordion {
+  &Container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &Title {
+    color: $gray-dark;
+    background: #f5f5f5;
+    font-size: px2em(22px);
+    font-weight: 300;
+    margin-bottom: px2em(3px);
+    padding: px2em(8px 14px 8px 22px);
+
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.2s;
+    user-select: none;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      box-shadow: 0px 0px 5px 0px rgba(227, 224, 227, 1);
+    }
+
+    &Content {
+      flex-grow: 1;
+    }
+
+    &Icon {
+      display: block;
+      height: 30px;
+      width: 30px;
+      background: url('/theme/icons/icons_30x30.svg') -60px -30px no-repeat;
+      // animation: fade-in 0.1s linear;
+      flex-shrink: 0;
+    }
+  }
+
+  &Panel {
+    color: $gray;
+    font-size: px2em(20px);
+    font-weight: 300;
+    display: none;
+    padding: 0.5em 1.5em;
+    animation: fade-in 0.25s ease-in;
+    text-align: justify;
+
+    ul {
+      list-style-position: inside;
+    }
+  }
+}

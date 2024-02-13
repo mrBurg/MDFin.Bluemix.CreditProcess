@@ -1,0 +1,10 @@
+@import '@scss/service';
+
+.container {
+  max-width: $xl;
+  width: 100%;
+}
+
+.errorNotification {
+  margin: 0 auto 0.5em;
+}

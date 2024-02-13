@@ -1,0 +1,77 @@
+@use "sass:math";
+
+@function getInfinity($start, $infinity) {
+  $media: $start;
+
+  @if type-of($infinity) == bool {
+    @return $media;
+  } @else if type-of($infinity) == number {
+    @return '#{$media} and (max-width: #{$infinity})';
+  } @else if type-of($infinity) == string {
+    @return '#{$media} and (max-width: #{getSize($infinity)})';
+  }
+}
+
+@function golden-ratio($num) {
+  @return math.div(round($num * $golden-ratio * 100), 100);
+}
+
+@function getSize($string) {
+  @if $string == 'xxs' {
+    @return $xxs;
+  } @else if $string == 'xs' {
+    @return $xs;
+  } @else if $string == 'sm' {
+    @return $sm;
+  } @else if $string == 'md' {
+    @return $md - 1;
+  } @else if $string == 'lg' {
+    @return $lg - 1;
+  } @else if $string == 'xl' {
+    @return $xl - 1;
+  } @else if $string == 'xxl' {
+    @return $xxl - 1;
+  }
+}
+
+@function clear-units($value) {
+  @if type-of($value) == 'number' {
+    @if (unitless($value)) {
+      @return $value;
+    } @else if unit($value) == 'em' {
+      @return math.div($value, 1em);
+    } @else if unit($value) == 'px' {
+      @return math.div($value, 1px);
+    } @else if unit($value) == 'pt' {
+      @return math.div($value, 1pt);
+    }
+  } @else {
+    @warn "Not a number value: #{$value}";
+    @return $value;
+  }
+}
+
+@function px2em($size, $base-size: $font-size) {
+  $base-size: clear-units($base-size);
+
+  @if (type-of($size) == 'list') {
+    $result: '';
+    $count: 0;
+
+    @each $i in $size {
+      $item: clear-units($i);
+      $result: $result + if($count == 0, '', ' ');
+      $result: #{$result + math.div(round(math.div($item, $base-size) * 100), 100)}em;
+      $count: $count + 1;
+    }
+    @return $result;
+  }
+
+  $size: clear-units($size);
+  $result: math.div(round(math.div($size, $base-size) * 100), 100);
+  @return #{$result}em;
+}
+
+@function resize($size, $percentage) {
+  @return $size * $percentage;
+}

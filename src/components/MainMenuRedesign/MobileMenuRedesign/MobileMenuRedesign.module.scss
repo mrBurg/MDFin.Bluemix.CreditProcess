@@ -1,0 +1,190 @@
+@import '@scss/service/';
+
+.mobile {
+  display: flex;
+  justify-content: space-between;
+  height: 43px;
+  padding: 0 16px;
+  align-items: center;
+  flex-shrink: 0;
+
+  &Short {
+    justify-content: center;
+  }
+
+  .hamburger {
+    padding: 0;
+    display: flex;
+
+    svg {
+      min-width: 24px;
+    }
+  }
+
+  .hamburger {
+    cursor: pointer;
+    background: none;
+    border: none;
+
+    &:hover:not(:disabled) {
+      background: none;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+  }
+
+  .logo {
+    display: flex;
+    max-width: 120px;
+    max-height: 28px;
+    min-width: 0;
+  }
+}
+
+.dropdown {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  transition: all 0.2s;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  .mobile {
+    background-color: $white;
+  }
+}
+
+.substrate {
+  transition: all 5s;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  overflow: scroll;
+
+  .nav {
+    background-color: $white;
+    text-align: center;
+    width: 90%;
+    max-width: 288px;
+    padding: 24px 40px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+
+    hr {
+      border: 0;
+      height: 0;
+      border-top: 1px solid $re-gray;
+    }
+  }
+
+  .link {
+    display: flex;
+    color: $re-gray-dark;
+    align-items: center;
+    text-align: left;
+    transition: background-color 0.2s;
+
+    &:hover {
+      color: $re-blue;
+      text-decoration: underline;
+    }
+  }
+
+  .logout {
+    @extend .link;
+
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+
+    &:hover:not(:disabled) {
+      background: none;
+      color: $re-blue;
+    }
+  }
+}
+
+.clientName {
+  display: flex;
+  column-gap: 8px;
+  align-items: center;
+  background-color: $re-gray-light;
+  width: 90%;
+  max-width: 288px;
+  padding: 24px 40px;
+}
+
+.cabinetMenu {
+  &Item {
+    display: flex;
+    column-gap: 8px;
+    align-items: center;
+  }
+
+  &Link,
+  &Button {
+    padding: 0;
+    border: none;
+    color: $re-gray-dark;
+    display: block;
+    text-align: left;
+    background-color: transparent;
+    white-space: nowrap;
+  }
+
+  &Button {
+    width: 100%;
+    cursor: pointer;
+
+    &:hover:not(:disabled) {
+      color: $re-blue;
+      text-decoration: underline;
+      background: none;
+    }
+  }
+
+  &Link {
+    &:hover {
+      color: $re-blue;
+      text-decoration: underline;
+    }
+  }
+}
+
+.contactSocial {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+
+  .phoneWrap {
+    display: flex;
+    column-gap: 8px;
+    align-items: center;
+
+    .phone {
+      color: $re-blue;
+      font-weight: 700;
+    }
+  }
+
+  .appWrap {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    line-height: 0;
+  }
+
+  .socialWrap {
+    display: flex;
+    justify-content: space-between;
+  }
+}

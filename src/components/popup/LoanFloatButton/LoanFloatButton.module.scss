@@ -1,0 +1,72 @@
+@import '@scss/service';
+
+$mob: $sm;
+$tab: $xxs, $xl;
+
+.float {
+  &Panel {
+    position: fixed;
+    z-index: 8;
+    bottom: 0;
+    left: 80px;
+    width: 100%;
+    max-width: 360px;
+    max-height: 0;
+    transition: all 0.2s ease;
+    border-radius: 16px 16px 0px 0px;
+    background: $loan-button-gradient;
+    @include respond($tab) {
+      left: 0;
+      max-width: none;
+    }
+
+    &Show {
+      display: block;
+      max-height: 185px;
+    }
+
+    .holder {
+      display: flex;
+      padding: 0 6px 0 16px; // 0 0 0 16px;
+      height: 185px;
+      justify-content: center; //space-between;
+
+      .left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        row-gap: 24px;
+
+        .text {
+          text-align: left;
+          color: $white;
+        }
+
+        .button {
+          display: flex;
+          min-height: 55px;
+        }
+      }
+
+      .right {
+        display: flex;
+        flex-shrink: 0;
+        align-items: flex-end;
+      }
+    }
+
+    .floatButton {
+      font-weight: 600;
+      color: $white;
+      background: $yellow-gradient;
+      padding: 16px 32px;
+      margin: auto;
+      border: none;
+      &:hover:not(:disabled) {
+        background: $yellow-gradient;
+        padding: 18px 32px;
+      }
+    }
+  }
+}

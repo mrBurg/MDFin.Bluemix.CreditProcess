@@ -1,0 +1,150 @@
+@import '@scss/service';
+
+.accounts {
+  font-size: 1.1em;
+
+  @include respond(md) {
+    font-size: 0.9em;
+  }
+
+  &Form {
+    width: 100%;
+
+    &Title {
+      font-size: 1.1em;
+      text-align: center;
+      margin-bottom: 1.5em;
+      position: relative;
+
+      svg {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &Note {
+    margin-top: 1em;
+    font-weight: bold;
+  }
+}
+
+.title {
+  font-size: 1.1em;
+  font-weight: normal;
+  text-align: center;
+  padding-bottom: 1.1em;
+}
+
+.add {
+  &Title {
+    @extend .title;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 1em;
+  }
+
+  &SubTitle {
+    @extend .title;
+    font-size: 1em;
+  }
+}
+
+.libraPayData {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+}
+
+.or {
+  margin: 0.5em 0;
+  text-align: center;
+}
+
+.button {
+  width: 100%;
+
+  &Confirm {
+    margin-top: 1em;
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+  @include respond(sm) {
+    flex-direction: column;
+  }
+}
+
+.input {
+  @extend %input;
+
+  border-radius: 10px;
+  border: 1px solid $gray-light;
+  padding: 0.5em;
+  font-size: 1.1em;
+  &Widget {
+    width: 100%;
+  }
+}
+
+.error {
+  border-color: $red;
+}
+
+.framed,
+.shaded {
+  background-color: $white;
+  box-sizing: border-box;
+  width: 100%;
+
+  :global .select-widget__control {
+    &::after {
+      display: none;
+    }
+  }
+
+  :global .select-widget__value-container {
+    padding: 0.79em 1em;
+    white-space: normal;
+  }
+}
+
+.framed {
+  border: 1px solid $gray-light;
+  padding: 1em;
+  box-shadow: $box-shadow;
+
+  /* :global .select-widget__control {
+    border: 1px solid $gray-light;
+
+    &:hover {
+      border: 1px solid $gray-light;
+    }
+  } */
+}
+
+.shaded {
+  :global .select-widget__control {
+    border: none;
+
+    &:hover {
+      border: none;
+    }
+  }
+
+  :global .select-widget {
+    box-shadow: $box-shadow;
+  }
+}
+
+.nonBankingDayNotify {
+  display: block;
+  margin-top: 1em;
+}

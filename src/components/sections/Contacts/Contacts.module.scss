@@ -1,0 +1,106 @@
+@import '@scss/service';
+$mob: $md;
+$tab: $xxs, $xl;
+
+.section {
+  width: 100%;
+}
+
+.content {
+  max-width: $xl;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 60px auto 40px;
+  @include respond($tab) {
+    margin: 20px 8px 20px;
+  }
+}
+
+.title {
+  font-size: 36px;
+  text-align: center;
+}
+
+.contacts {
+  &Content {
+    display: flex;
+    column-gap: 16px;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 52px;
+    @include respond($mob) {
+      flex-direction: column;
+      row-gap: 40px;
+      align-items: center;
+      margin-top: 24px;
+    }
+
+    .link {
+      color: $blue;
+    }
+  }
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 320px;
+  align-items: center;
+
+  &Content {
+    text-align: center;
+    margin-top: 24px;
+    line-height: 24px;
+  }
+
+  &Title {
+    display: flex;
+    flex-flow: column;
+    color: $gray-dark;
+    font-size: 18px;
+  }
+
+  &SubTitle {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    font-size: 18px;
+  }
+}
+
+.icon {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.list {
+  margin-top: 24px;
+  list-style: none;
+
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.feedback {
+  max-width: none !important;
+}
+
+.holidayInfo {
+  font-size: 18px;
+  margin-top: 24px;
+
+  span {
+    color: $re-blue;
+  }
+
+  &Title {
+    color: $re-blue;
+    font-weight: 700;
+  }
+}

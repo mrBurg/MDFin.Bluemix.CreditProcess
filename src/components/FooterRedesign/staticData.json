@@ -1,0 +1,111 @@
+{
+  "less": {
+    "copyright": "Copyright &copy; 2024 «HoraCredit» Toate drepturile rezervate"
+  },
+  "normal": {
+    "tags": {
+      "privacy_policy": {
+        "href": "/privacy-policy",
+        "type": "privacy_policy",
+        "label": "aici",
+        "tagType": "link"
+      },
+      "loan_terms_and_conditions": {
+        "type": "loan_terms_and_conditions",
+        "label": "Termenii şi Condiţiile pentru împrumutul"
+      }
+    },
+    "footer": {
+      "menu": [
+        {
+          "url": "/about-loan",
+          "label": "Despre împrumut"
+        },
+        {
+          "url": "/repayment",
+          "label": "Cum plătesc"
+        },
+        {
+          "url": "/faq",
+          "label": "Întrebări frecvente"
+        },
+        {
+          "url": "/blog",
+          "label": "Blog"
+        },
+        {
+          "url": "/contacts",
+          "label": "Contact"
+        }
+      ],
+      "getApp": {
+        "title": "Aplicatia Horacredit este disponibila pe"
+      },
+      "contacts": {
+        "email": "info@horacredit.ro",
+        "title": "Contact:",
+        "phones": [
+          {
+            "link": "+40 318 18 18 18",
+            "text": "Informaţii generale: "
+          },
+          {
+            "link": "+40 318 10 10 72",
+            "text": "Contracte în derulare: "
+          }
+        ],
+        "address": {
+          "text": "Splaiul Unirii, Nr. 16, Clădirea Muntenia, Etajele 2, 4 și 5, Birourile cu nr. 212, 213, 412, 413, 413A, 512, 513, 513A, Sector 4, București",
+          "title": "Hora Credit IFN S.A."
+        },
+        "holidayInfo": {
+          "title": "Program de sărbători",
+          "expiryDate": "03/01/2024",
+          "workingHours": [
+            "<span>22 Decembrie:</span> 9:00-16:30",
+            "<span>25 Decembrie:</span> Închis",
+            "<span>26 Decembrie:</span> 9:00-17:30",
+            "<span>1 Ianuarie:</span> Închis",
+            "<span>2 Ianuarie:</span> 9:00-17:30"
+          ]
+        },
+        "workingHours": [
+          "Luni - Vineri: <span>9:00 - 20:00</span>",
+          "Sâmbătă: <span>9:00 - 17:30</span>",
+          "Duminică: <span>9:00 - 17:30</span>"
+        ]
+      },
+      "seoPages": [
+        {
+          "url": "/credit-urgent",
+          "label": "Credit urgent"
+        },
+        {
+          "url": "/credit-instant",
+          "label": "Credit instant"
+        }
+      ],
+      "socialUrl": {
+        "youtube": "https://youtube.com/@horacredit_ro",
+        "facebook": "https://www.facebook.com/profile.php?id=100089218688915",
+        "instagram": "https://www.instagram.com/horacredit.ro"
+      }
+    },
+    "copyright": "Consultați <privacy_policy /> Politica de Confidențialitate a Datelor.<br /><loan_terms_and_conditions /><br />Copyright &copy; 2024 «HoraCredit» Toate drepturile rezervate"
+  },
+  "loyalty": {
+    "tags": {
+      "privacy_policy": {
+        "href": "/privacy-policy",
+        "type": "privacy_policy",
+        "label": "aici",
+        "tagType": "link"
+      },
+      "loan_terms_and_conditions": {
+        "type": "loan_terms_and_conditions",
+        "label": "Termenii şi Condiţiile pentru împrumutul"
+      }
+    },
+    "copyright": "Consultați <privacy_policy /> Politica de Confidențialitate a Datelor.<br /><loan_terms_and_conditions /><br />Copyright &copy; 2024 «HoraCredit» Toate drepturile rezervate"
+  }
+}

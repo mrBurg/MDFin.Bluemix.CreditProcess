@@ -1,0 +1,1 @@
+export { MainMenuRedesign } from './MainMenuRedesign';

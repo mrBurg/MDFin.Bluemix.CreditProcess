@@ -1,0 +1,78 @@
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://3ds-sandbox.sibs.ro/horaCredit/templates/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"
+      href="https://3ds-sandbox.sibs.ro/horaCredit/templates/assets/css/styles.css">
+  </head>
+
+  <body style="padding-top: 5%;padding-bottom: 10%;">
+    <header class="templateLogo">
+      <div class="container">
+        <h5>Introdu datele de pe card</h5>
+      </div>
+    </header>
+
+    <section class="template">
+      <div class="container">
+        <div class="row">
+          <div class="t_middle">
+            <form method="POST" name="frm" accept-charset="utf-8" action="/ls/api/processCard">
+              <div class="form-group">
+                <div class="col">
+                  <input type="text" placeholder="CARD" id="card" min="16" maxlength="16" max="16" name="CARD"
+                    class="bgInput form-control" value="" onkeypress="return isNumberKey(event)">
+                  <label for="card">Numărul cardului tău:</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col">
+                  <input placeholder="Data expirarii:" id="exp_date" type="tel" maxlength="5" name="EXP_DATE"
+                    class="bgInput form-control" value="" onkeypress="return isNumberKey(event)">
+                  <label for="exp_date">Data expirării:</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col">
+                  <input placeholder="Codul CVV:" id="cvv" type="tel" maxlength="3" size="3" name="CVC2" value=""
+                    class="bgInput form-control" onkeypress="return isNumberKey(event)">
+                  <label for="cvv" style="text-align: center">Codul CVV:</label>
+                </div>
+              </div>
+              <div class="row interval">
+                <div class="flex">
+                  <input type="submit" class="bgButton button center" value="Adaugă cardul">
+                </div>
+              </div>
+              <input type="hidden" name="ORDER" value="206894">
+              <input type="hidden" name="romcardId" value="cd2583b2686645fbe02ef7fb1fb6ee1cd53a0c8e">
+              <input type="hidden" name="b" value="20230626093629">
+              <input type="hidden" name="a" value="3da7d22402ff0980c227f724a93f405b65133869">
+              <input type="hidden" name="c" value="c7fc9ab787befdbcab45a80e829af9c0ce0961c72b58f442921b1900aa44d7f2">
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function isNumberKey(evt) {
+        var charCode = (evt.which) ? evt.which : evt.keyCode;
+        if (charCode != 46 && charCode > 31
+          && (charCode < 48 || charCode > 57)) {
+          return false;
+        }
+
+        return true;
+      }
+
+      console.log(window.location.href);
+    </script>
+
+  </body>
+
+</html>

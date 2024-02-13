@@ -1,0 +1,75 @@
+@import '@scss/service';
+
+.group {
+  background-color: $gray-misty;
+  box-sizing: border-box;
+  margin-bottom: 2em;
+  padding: 0.8em 2em 1.75em;
+  width: 100%;
+  margin-top: 3.68em;
+  border-radius: 10px;
+
+  @include respond($md) {
+    margin-top: 4.21em;
+  }
+
+  @include respond($xs) {
+    padding: 0.5em 1.42em 1.42em;
+    margin-top: 2.5em;
+  }
+
+  &Title {
+    font-size: 0.875em;
+    font-weight: normal;
+    text-align: left;
+    color: $gray;
+
+    @include respond($md) {
+      font-size: 1em;
+    }
+  }
+
+  &Data {
+    display: grid;
+    grid-template-columns: auto;
+    grid-row-gap: 1.875em;
+    margin-top: 1.31em;
+
+    @include respond($xs) {
+      margin-top: 0.85em;
+      padding: 0 1.57em;
+      grid-row-gap: 1.21em;
+    }
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:after {
+    content: '';
+    flex: auto;
+  }
+
+  .documentsWrap {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-row-gap: 1.875em;
+    justify-content: space-between;
+
+
+    @include respond($xs) {
+      grid-template-columns: auto auto;
+      grid-row-gap: 1.21em;
+    }
+
+    @include respond($xxs) {
+      grid-template-columns: auto;
+      justify-content: center;
+    }
+  }
+}

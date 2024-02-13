@@ -1,0 +1,41 @@
+@import '@scss/service';
+@import '../Client.module.scss';
+
+.address {
+  @extend .clientForm;
+
+  .livingPeriod {
+    margin-top: px2em(15px);
+    width: 48%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include respond(xs) {
+      width: 100%;
+    }
+
+    &Title {
+      @include respond(sm) {
+        width: 30%;
+      }
+
+      @include respond(xs) {
+        width: 100%;
+        margin-bottom: px2em(15px);
+      }
+    }
+
+    .input {
+      width: 30%;
+      margin: 0;
+      padding: px2em(12px) px2em(resize(35px, 0.5));
+
+      @include respond(xs) {
+        width: 48%;
+        padding: px2em(12px) px2em(35px);
+      }
+    }
+  }
+}

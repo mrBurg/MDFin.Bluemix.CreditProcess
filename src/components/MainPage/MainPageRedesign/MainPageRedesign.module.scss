@@ -1,0 +1,65 @@
+@import '@scss/service';
+$mob: $md;
+$tab: $xxs, $xl;
+
+.faq {
+  width: 100%;
+
+  .content {
+    padding: 40px 16px;
+    @include respond($mob) {
+      padding: 24px 16px;
+    }
+  }
+
+  .faqWrap {
+    max-width: 628px;
+    display: flex;
+    margin: auto;
+  }
+}
+
+.explanations {
+  width: 100%;
+
+  .content {
+    max-width: $re-xl;
+    margin: auto;
+    padding: 40px 16px;
+    @include respond($mob) {
+      padding: 24px 16px;
+    }
+  }
+}
+
+.anpcContainer {
+  width: 100%;
+
+  padding: 40px 16px;
+  text-align: center;
+  @include respond($mob) {
+    padding: 24px 16px;
+  }
+}
+
+.tagsCloudContainer {
+  display: flex;
+  width: 100%;
+  max-width: $re-xl;
+  justify-content: center;
+  padding: 40px 16px;
+  @include respond($tab) {
+    padding: 24px 16px 48px;
+  }
+}
+
+.footer {
+  width: 100%;
+}
+
+.footerfloatPanelGap {
+  padding-bottom: 185px;
+}
+.footerfloatPanelGap3 {
+  padding-bottom: 104px;
+}

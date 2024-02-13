@@ -1,0 +1,72 @@
+@mixin respond($data, $infinity: false) {
+  $type: 'only screen';
+  $size: $xxs;
+  $media: '(min-width: #{$size})';
+
+  @each $param in $data {
+    @if type-of($param) == number {
+      @media only screen and (if($infinity and type-of($infinity) == bool, "min-width", "max-width"): #{$param}) {
+        @content;
+      }
+    } @else if type-of($param) == string {
+      @if $param == 'xxs' {
+        $media: '(max-width: #{$xxs})';
+
+        @if $infinity {
+          $min: '(min-width: 0px)';
+          $media: getInfinity($min, $infinity);
+        }
+      } @else if $param == 'xs' {
+        $media: '(max-width: #{$xs})';
+
+        @if $infinity {
+          $min: '(min-width: #{$xxs + 1})';
+          $media: getInfinity($min, $infinity);
+        }
+      } @else if $param == 'sm' {
+        $media: '(max-width: #{$sm})';
+
+        @if $infinity {
+          $min: '(min-width: #{$xs + 1})';
+          $media: getInfinity($min, $infinity);
+        }
+      } @else if $param == 'md' {
+        $media: '(max-width: #{getSize(md)})';
+
+        @if $infinity {
+          $min: '(min-width: #{$sm + 1})';
+          $media: getInfinity($min, $infinity);
+        }
+      } @else if $param == 'lg' {
+        $media: '(min-width: #{$md}) and (max-width: #{getSize(lg)})';
+
+        @if $infinity {
+          $min: '(min-width: #{$md})';
+          $media: getInfinity($min, $infinity);
+        }
+      } @else if $param == 'xl' {
+        $media: '(min-width: #{$lg}) and (max-width: #{getSize(xl)})';
+
+        @if $infinity {
+          $min: '(min-width: #{$lg})';
+          $media: getInfinity($min, $infinity);
+        }
+      } @else if $param == 'xxl' {
+        $media: '(min-width: #{$xl})';
+
+        @if $infinity {
+          $min: '(min-width: #{$xl})';
+          $media: getInfinity($min, $infinity);
+        }
+      }
+
+      @media #{$type} and #{$media} {
+        @content;
+      }
+    } @else if type-of($param) == list {
+      @media #{$type} and (min-width: nth($param, 1)) and (max-width: nth($param, 2)) {
+        @content;
+      }
+    }
+  }
+}

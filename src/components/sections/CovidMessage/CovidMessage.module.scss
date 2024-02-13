@@ -1,0 +1,15 @@
+@import '@scss/service';
+
+.covidMessage {
+  &__holder {
+    padding: 1em;
+    font-size: 1em;
+    color: $gray;
+  }
+
+  &__data {
+    text-align: justify;
+    width: 100%;
+    max-width: 56em;
+  }
+}

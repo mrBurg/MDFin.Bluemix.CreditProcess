@@ -1,0 +1,70 @@
+@import '@scss/service/';
+
+.desktop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  max-width: $xxl;
+  margin: auto;
+  padding: 16px 80px;
+  transition: all 0.2s;
+  width: 100%;
+  // background-color: $white;
+  min-height: 88px;
+  column-gap: 40px;
+
+  &Compressed {
+    // padding: 0.5em;
+
+    .logo {
+      width: 8%;
+    }
+  }
+
+  &Less {
+    justify-content: center;
+  }
+}
+
+.logo {
+  width: 100%;
+  max-width: 160px;
+  max-height: 40px;
+  min-width: 0;
+  transition: all 0.2s;
+}
+
+.menu {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+  column-gap: 40px;
+  align-items: center;
+}
+
+.nav {
+  // flex-grow: 1;
+  // margin: 0 3%;
+  // justify-content: space-between;
+  display: flex;
+  column-gap: 40px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: $re-gray-dark;
+
+  &:hover {
+    color: $re-blue;
+  }
+  &:active {
+    color: $re-blue;
+  }
+}
+
+.active {
+  color: $re-blue;
+}

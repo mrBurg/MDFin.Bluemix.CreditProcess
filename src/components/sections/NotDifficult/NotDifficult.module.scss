@@ -1,0 +1,64 @@
+@import '@scss/service';
+
+.section {
+  background-color: lighten($gray, 18%);
+  display: flex;
+  max-width: $lg;
+  width: 100%;
+
+  @include respond(sm) {
+    font-size: px2em(13px);
+  }
+
+  @include respond(xs) {
+    flex-direction: column;
+  }
+}
+
+.item {
+  width: 50%;
+
+  @include respond(xs) {
+    width: 100%;
+  }
+}
+
+.image {
+  background: url('/images/main-page/not-difficult/image.jpg') center top /
+    cover no-repeat;
+  max-width: px2em(470px);
+
+  @include respond(xs) {
+    max-width: none;
+    height: px2em(350px);
+  }
+
+  @include respond(375px) {
+    height: px2em(270px);
+  }
+
+  @include respond(xxs) {
+    height: px2em(250px);
+  }
+}
+
+.content {
+  padding: px2em(30px);
+  flex-grow: 1;
+}
+
+.title,
+.description {
+  text-align: justify;
+}
+
+.description {
+  margin-top: px2em(30px);
+  font-size: px2em(15.5px);
+  font-style: italic;
+}
+
+.loanButton {
+  margin: px2em(30px) auto 0;
+  display: block;
+}

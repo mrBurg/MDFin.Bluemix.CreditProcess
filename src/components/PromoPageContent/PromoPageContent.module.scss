@@ -1,0 +1,157 @@
+@import '@scss/service';
+
+$mob: $md;
+$tab: $xl;
+
+.pageContainer.pageContainer {
+  padding: 40px 32px 80px;
+  margin: 0;
+  @include respond($mob) {
+    padding: 20px 8px 40px;
+  }
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  @include respond($mob) {
+    font-size: 14px;
+  }
+}
+
+.banner {
+  display: flex;
+  width: 100%;
+  column-gap: 24px;
+  margin-bottom: 64px;
+  @include respond($tab) {
+    margin-bottom: 16px;
+  }
+  @include respond($sm) {
+    align-items: center;
+    flex-direction: column;
+    row-gap: 16px;
+    margin-bottom: 0;
+  }
+
+  &Content {
+    position: relative;
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    @include respond($tab) {
+      flex-direction: column;
+      row-gap: 20px;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  }
+
+  &Img {
+    display: flex;
+    @include respond($tab) {
+      max-width: 402px;
+    }
+    @include respond($mob) {
+      max-width: 248px;
+    }
+  }
+
+  .productSelector {
+    flex-shrink: 0;
+  }
+}
+
+.pageTitle {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  left: 0;
+  color: $blue;
+  font-size: 64px;
+  font-weight: 700;
+  margin: 121px 0 0;
+  max-width: 384px;
+  @include respond($tab) {
+    position: relative;
+    font-size: 40px;
+    max-width: 402px;
+    text-align: center;
+    margin: 0;
+  }
+  @include respond($mob) {
+    font-size: 32px;
+    max-width: 248px;
+  }
+}
+
+.section {
+  width: 100%;
+  @include respond($mob) {
+    padding: 0 8px;
+  }
+
+  .title {
+    font-size: 24px;
+    font-weight: 700;
+    color: $blue;
+    margin-top: 24px;
+    text-align: center;
+    @include respond($mob) {
+      font-size: 20px;
+      margin-top: 16px;
+    }
+  }
+
+  .textBlock {
+    width: 100%;
+    margin-top: 16px;
+
+    .subTitle {
+      font-size: 20px;
+      @include respond($mob) {
+        font-size: 16px;
+      }
+    }
+
+    p {
+      margin-top: 8px;
+    }
+
+    ul,
+    ol {
+      margin-top: 8px;
+    }
+    li {
+      margin: 8px 0 0 24px;
+    }
+  }
+}
+
+.hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid $re-gray;
+  margin-top: 80px;
+  @include respond($tab) {
+    margin-top: 48px;
+  }
+}
+
+.shareContainer {
+  margin: 16px 16px 0 16px;
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+
+  .imgLink {
+    cursor: pointer;
+    span {
+      vertical-align: bottom;
+    }
+  }
+}

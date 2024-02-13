@@ -1,0 +1,15 @@
+@import '@scss/service';
+
+.policyInfo {
+  &Item {
+    display: flex;
+    // margin: 1em 0;
+    padding: 10px;
+    padding-left: 1em;
+  }
+
+  &Accent {
+    border: 1px dashed $gray;
+    border-radius: 10px;
+  }
+}

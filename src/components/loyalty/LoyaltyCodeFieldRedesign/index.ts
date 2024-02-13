@@ -1,0 +1,1 @@
+export { LoyaltyCodeFieldRedesign } from './LoyaltyCodeFieldRedesign';

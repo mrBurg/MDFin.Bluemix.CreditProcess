@@ -1,0 +1,27 @@
+@import '@scss/service';
+
+.loan {
+  &Data {
+    padding: 1em;
+    background-color: $blue;
+    color: $white;
+    font-weight: 300;
+  }
+
+  &Title {
+    text-align: center;
+    font-size: 0.85em;
+    margin-bottom: 2em;
+  }
+
+  &Info {
+    width: 100%;
+    font-size: 1.1em;
+
+    td {
+      &:first-child {
+        width: 70%;
+      }
+    }
+  }
+}

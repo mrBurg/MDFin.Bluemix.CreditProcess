@@ -1,0 +1,137 @@
+@import '@scss/service';
+
+.loyaltyCode {
+  &Main {
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    column-gap: 8px;
+
+    .loyaltyCodeButton {
+      display: flex;
+      border: none;
+      padding: 0;
+      font-size: 14px;
+      color: $re-blue;
+      white-space: nowrap;
+      text-decoration: underline;
+
+      &:hover:not(:disabled) {
+        background: inherit;
+        color: $re-blue-dark;
+      }
+    }
+
+    .tooltip {
+      &Wrap {
+        position: relative;
+      }
+
+      &Button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 24px;
+        width: 24px;
+        font-weight: bold;
+        color: $re-yellow;
+        padding: 0; //0px 8px;
+        background-color: $re-blue;
+        border: 1px solid $re-blue;
+        border-radius: 50%;
+        transition: all 0.2s linear;
+
+        &:hover {
+          color: $re-yellow;
+          background: $re-blue;
+        }
+      }
+    }
+
+    .closeNotify {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      content: '';
+      top: 6px;
+      right: 6px;
+
+      border: none;
+      padding: 0;
+      background: url('/theme/icons/cross-icon.svg') no-repeat center;
+
+      &:hover {
+        cursor: pointer;
+        background: url('/theme/icons/cross-icon.svg') no-repeat center;
+        transform: rotate(90deg);
+      }
+    }
+
+    .inputRedesign {
+      @extend %input-redesign;
+    }
+  }
+
+  &Notify {
+    z-index: 1;
+    position: absolute;
+    top: 32px;
+    right: 0;
+    display: flex;
+    padding: 16px;
+    font-size: 14px;
+    color: $re-gray-dark;
+    width: max-content;
+    max-width: 188px;
+    background-color: $white;
+    border: 1px solid $re-blue;
+    border-radius: 8px;
+
+    &::before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: -18px;
+      right: 3px;
+      border: solid transparent;
+    }
+    &:before {
+      // top: -18px;
+      border-bottom: solid $re-blue;
+      border-width: 9px;
+    }
+    &:after {
+      top: -17px;
+      border-bottom: solid $white;
+      border-width: 9px;
+    }
+  }
+
+  &Error {
+    display: block;
+    height: 0;
+    line-height: 0;
+    margin-top: 0;
+    font-size: 0;
+    transition: all 0.3s linear;
+    text-align: left;
+
+    &Open {
+      height: 100%;
+      line-height: 1;
+      display: flex;
+      margin-top: 0.5em;
+      font-size: 12px;
+      color: $re-red;
+    }
+  }
+}
+
+.tooltipNotify {
+  margin-top: 0.5em;
+  br {
+    display: none;
+  }
+}

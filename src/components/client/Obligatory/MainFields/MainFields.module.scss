@@ -1,0 +1,28 @@
+@import './../../Client.module.scss';
+
+.mainFields {
+  @extend .clientForm;
+  max-width: $sm;
+
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+
+  &Buttons {
+    @extend .clientForm;
+    max-width: 420px;
+    margin: auto;
+    margin-top: 2.5em;
+
+    .button {
+      &Edit {
+        margin: 0.5em auto 0;
+        display: block;
+      }
+
+      &Submit {
+        margin-top: 3.5em;
+      }
+    }
+  }
+}

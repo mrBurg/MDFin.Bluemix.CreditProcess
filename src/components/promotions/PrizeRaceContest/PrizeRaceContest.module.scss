@@ -1,0 +1,597 @@
+@import '@scss/service';
+$mob: $lg; //$md;
+
+// $mob: 480px; //640px;
+
+.bannerWrap {
+  height: 100%;
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  justify-content: center;
+}
+
+.banner {
+  /* background: transparent url('/images/prize-race-contest/banner.jpg') center /
+    contain no-repeat;
+  background-size: cover;
+  width: 100%;
+  padding-top: 52.22%; //752px;
+
+  @include respond($xs) {
+    background: transparent url('/images/prize-race-contest/banner_mobile.jpg')
+      center / contain no-repeat;
+    width: 100%;
+    padding-top: 170%;
+  } */
+
+  display: flex;
+  flex-direction: column;
+  background: transparent url('/images/prize-race-contest/banner.png') left
+    center / contain no-repeat;
+  background-color: #329e37;
+  // background-size: cover;
+  width: 100%;
+  // padding-top: 515px; //52.22%; //752px;
+  @include respond($mob) {
+    background: transparent url('/images/prize-race-contest/banner_mob.png')
+      center top no-repeat;
+    background-color: #329e37;
+    // background-position: 15px top; //left top;
+    // background-size: 570px;
+  }
+}
+
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+  margin: 0 0 0 auto;
+  padding: 3.1em 6.5em 3.1em 3.1em;
+  row-gap: 1em;
+  align-items: center;
+
+  @include respond($xxl) {
+    font-size: 0.8em;
+  }
+  @include respond($xl) {
+    font-size: 0.65em;
+  }
+  @include respond($mob) {
+    width: 100%;
+    padding: 0.8em;
+    row-gap: 0.5em;
+    margin: 270px 0 0 0;
+    font-size: 1em;
+  }
+
+  .promo {
+    &Title {
+      font-size: 3em;
+      font-weight: 800;
+      color: $orange;
+      text-align: center;
+      @include respond($mob) {
+        font-size: 1.5em;
+      }
+    }
+
+    &SubTitle {
+      display: flex;
+      flex-direction: column;
+      // align-items: center;
+      // justify-content: center;
+      text-align: center;
+      font-size: 2.5em;
+      font-weight: 800;
+      color: $white;
+      line-height: 118.5%;
+      // row-gap: 2em;
+      // margin-top: 0.5em;
+      margin: 0 2.2em;
+
+      span {
+        color: $orange;
+        font-size: 7.6em;
+        margin: 0.27em 0 0.4em;
+      }
+      // br {
+      //   display: none;
+      // }
+
+      @include respond($mob) {
+        flex-direction: row;
+        align-items: center;
+        font-size: 1.25em;
+        padding: 0;
+        text-align: left;
+        column-gap: 0.5em;
+        margin: 0 auto; // 1.5em;
+        span {
+          font-size: 6em;
+          margin: 0.27em 0 0.4em;
+        }
+        // br {
+        //   display: block;
+        // }
+      }
+    }
+
+    // .buttonWrap {
+    &Button {
+      max-width: 270px;
+      // max-width: 386px;
+      height: 76px;
+      color: $white;
+      font-size: 26px; //1.625em;
+      // margin: 1.8em auto 0;
+
+      @media only screen and (max-width: $sm) {
+        // margin: 1.1em auto 0;
+      }
+    }
+
+    &Footnote {
+      font-size: 1em;
+      line-height: 124.1%;
+      color: $white;
+      text-align: center;
+      margin-top: 2em;
+
+      @include respond($mob) {
+        font-size: 0.5em;
+        margin-top: 0;
+      }
+    }
+  }
+  // }
+}
+
+.pageContainer.pageContainer {
+  @media only screen and (max-width: $xs) {
+    padding: 0 1em;
+  }
+  @media only screen and (max-width: $xxs) {
+    padding: 0 0.5em;
+  }
+}
+
+.contentWrap {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  width: 100%;
+  max-width: 1120px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 2.5em;
+  text-align: center;
+}
+
+.mainTitle {
+  margin-top: 0.8em;
+
+  @media only screen and (max-width: $sm) {
+    margin-top: 0.75em;
+  }
+}
+
+.loanButton.loanButton {
+  max-width: 386px;
+  height: 76px;
+  color: $white;
+  font-size: 1.5em;
+  margin: 1.8em auto 0;
+
+  @media only screen and (max-width: $sm) {
+    margin: 1.1em auto 0;
+  }
+}
+
+.howToParticipateList {
+  margin-top: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 3.5em;
+
+  @media only screen and (max-width: $md) {
+    flex-direction: column;
+    row-gap: 0;
+  }
+
+  @media only screen and (max-width: $sm) {
+    margin-top: 0;
+  }
+
+  li {
+    width: 100%;
+    max-width: 256px;
+    display: flex;
+    flex-direction: column;
+    height: 280px;
+    row-gap: 0.5em;
+
+    @media only screen and (max-width: $xl) {
+      max-width: 200px;
+    }
+    @media only screen and (max-width: $md) {
+      height: auto;
+    }
+  }
+}
+
+.arrow {
+  background: transparent url('/images/prize-race-contest/line_arrow.png') right
+    bottom no-repeat;
+  width: 100%;
+  @media only screen and (max-width: $md) {
+    background: none;
+  }
+}
+
+.bigNumber {
+  font-size: 7em;
+  text-align: left;
+  font-weight: 800;
+  color: #e1e1e3;
+}
+
+.participateDescription {
+  text-align: left;
+  line-height: 140%;
+  a {
+    color: $gray-dark;
+  }
+}
+
+.howToGetTitle {
+  margin-top: 1.3em;
+  line-height: 140%;
+}
+
+.howToGetList {
+  margin-top: 2em;
+  display: flex;
+  justify-content: space-between;
+
+  @media only screen and (max-width: $lg) {
+    margin-top: 2.7em;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  li {
+    width: 100%;
+    max-width: 352px;
+    height: 420px;
+
+    @media only screen and (max-width: $lg) {
+      height: auto;
+    }
+  }
+  .liIndex0,
+  .liIndex1 {
+    display: flex;
+    align-items: flex-end;
+  }
+  .liIndex2 {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .bubble {
+    height: 267px;
+    display: flex;
+    align-items: center;
+    padding: 0 4em;
+    border-radius: 50%;
+    position: relative;
+
+    .svgTile {
+      width: 93px;
+      height: 96px;
+      position: absolute;
+    }
+
+    &Yellow {
+      background: #fff6d9;
+      margin-bottom: 64px;
+
+      .svgTile {
+        left: 29%;
+        bottom: -27%;
+        transform: scale(-1);
+        path {
+          fill: #fff6d9;
+        }
+      }
+    }
+    &Green {
+      background: #e0f0e1;
+      @media only screen and (max-width: $lg) {
+        margin-top: 64px;
+      }
+
+      .svgTile {
+        left: 47%;
+        top: -27%;
+        path {
+          fill: #e0f0e1;
+        }
+      }
+    }
+    &Red {
+      background: #f8dbdf;
+      margin-top: 64px;
+      @media only screen and (max-width: $lg) {
+        margin-top: 110px;
+      }
+
+      .svgTile {
+        left: 30%;
+        top: -27%;
+        transform: scaleX(-1);
+        path {
+          fill: #f8dbdf;
+        }
+      }
+    }
+
+    p {
+      line-height: 157%;
+    }
+  }
+}
+.scooterWrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 3.8em;
+  column-gap: 2em;
+
+  @media only screen and (max-width: $sm) {
+    column-gap: 1.6em;
+  }
+}
+
+.subTitle {
+  margin: 2em auto 0;
+  font-size: 1.5em;
+  font-weight: 700;
+  line-height: 157%;
+  text-align: center;
+  max-width: 620px;
+  @media only screen and (max-width: $sm) {
+    font-size: 1.25em;
+  }
+}
+
+.prizesWrap {
+  margin-top: 5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .prizesTextBlock {
+    display: flex;
+    flex-direction: column;
+    max-width: 734px;
+    width: 100%;
+  }
+
+  .prizesDescription {
+    font-size: 1.5em;
+    margin-top: 1em;
+    font-weight: 700;
+    line-height: 157%;
+    text-align: center;
+    padding: 64px 58px;
+    background: #e0f0e1;
+    border-radius: 12px;
+
+    @media only screen and (max-width: $sm) {
+      font-size: 1.25em;
+      margin-top: 1.2em;
+      padding: 64px 24px;
+    }
+  }
+
+  .prizes {
+    display: flex;
+    margin-top: 1em;
+    column-gap: 6em;
+    @media only screen and (max-width: $lg) {
+      flex-direction: column;
+      row-gap: 3em;
+    }
+
+    li {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .prizesImage {
+    width: 100%;
+    max-width: 498px;
+
+    @media only screen and (max-width: $lg) {
+      max-width: 147px;
+    }
+  }
+  .prizeTitle {
+    margin: 1em 2em 0;
+    font-size: 2em;
+    font-weight: 800;
+
+    @media only screen and (max-width: $sm) {
+      margin-top: 0.5em;
+    }
+  }
+
+  .prizeDescr {
+    margin: 0.5em 0 0 4em;
+    line-height: 140%;
+    br:first-child {
+      display: none;
+
+      @media only screen and (max-width: $sm) {
+        display: inline;
+      }
+    }
+  }
+
+  .prizesFootnote {
+    margin-top: 2.3em;
+    width: 100%;
+    max-width: 734px;
+    background: #fff6d9;
+    border-radius: 12px;
+    padding: 40px 0;
+
+    font-size: 1.5em;
+    font-weight: 700;
+    line-height: 140%;
+    text-align: center;
+
+    @media only screen and (max-width: $sm) {
+      font-size: 1.25em;
+      padding: 1em 1.2em;
+    }
+  }
+}
+
+.youtubeWrap {
+  margin-top: 4.5em;
+  @media only screen and (max-width: $sm) {
+    margin-top: 3.5em;
+  }
+}
+
+.ytiframe {
+  width: 100%;
+  height: 319px;
+  max-width: 562px;
+  max-height: 319px;
+
+  @media only screen and (max-width: $sm) {
+    height: 173px;
+    max-height: 173px;
+    max-width: 304px;
+  }
+}
+
+.winnerTitle {
+  margin-top: 2.5em;
+  font-size: 2em;
+}
+
+.winnerList {
+  width: 100%;
+  max-width: 928px;
+  margin: 2.25em auto 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5em;
+
+  li {
+    display: flex;
+    text-align: center;
+    column-gap: 1em;
+    justify-content: center;
+    @media only screen and (max-width: $sm) {
+      column-gap: 0.25em;
+    }
+  }
+}
+
+.winnersCount {
+  max-width: 19%;
+  width: 100%;
+
+  @media only screen and (max-width: $sm) {
+    max-width: 17%;
+  }
+}
+
+.winnersDealNo {
+  width: 100%;
+  max-width: 29%;
+
+  @media only screen and (max-width: $sm) {
+    max-width: 27%;
+  }
+}
+
+.winnersName {
+  max-width: 52%;
+  width: 100%;
+
+  @media only screen and (max-width: $sm) {
+    max-width: 56%;
+  }
+}
+
+.winnerCell {
+  padding: 16px 0;
+  font-size: 15px;
+  line-height: 157%;
+  background-color: #e1e1e3;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &Title {
+    background-color: #e0f0e1;
+  }
+}
+
+.termsTitle {
+  font-size: 1em;
+  margin-top: 4.5em;
+  text-align: center;
+
+  @media only screen and (max-width: $sm) {
+    margin-top: 2.625em;
+  }
+
+  a {
+    color: #329e37;
+  }
+}
+
+.toUpperCase {
+  text-transform: uppercase;
+}
+
+.footerWrap {
+  width: 100%;
+  padding: 3em 0;
+  background-color: #329e37;
+}
+
+.footer {
+  color: $gray-dark;
+  font-weight: 400;
+  max-width: 426px;
+
+  @media only screen and (max-width: $sm) {
+    font-size: 1em;
+  }
+
+  a {
+    color: #f2f2f2;
+  }
+}

@@ -1,0 +1,167 @@
+@import '@scss/service';
+$mob: $md;
+
+.section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: $re-xl;
+  align-items: center;
+  padding: 40px 16px;
+  margin: auto;
+  @include respond($mob) {
+    padding: 24px 16px;
+  }
+}
+
+.title {
+  font-size: 32px;
+  color: $re-blue;
+  text-align: center;
+
+  @include respond($mob) {
+    font-size: 24px;
+  }
+}
+.subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 16px auto 0;
+  max-width: 400px;
+  text-align: center;
+  @include respond($mob) {
+    font-size: 14px;
+  }
+}
+
+.youtubeWrap {
+  margin-top: 40px;
+  @include respond($mob) {
+    margin-top: 16px;
+  }
+
+  iframe {
+    border-radius: 12px;
+  }
+}
+
+.steps {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  @include respond($lg) {
+    flex-direction: column;
+    margin-top: 16px;
+    row-gap: 16px;
+  }
+}
+
+.arrow {
+  display: flex;
+  @include respond($lg) {
+    display: none;
+  }
+  &:last-child {
+    display: none;
+  }
+}
+
+.step {
+  flex-basis: calc(33.33% - 0.5em);
+  display: flex;
+  column-gap: 24px;
+  align-items: center;
+
+  background-color: $re-gray-light;
+  border: 1px solid $re-blue;
+  border-radius: 8px;
+  padding: 32px 24px;
+  height: 160px;
+  max-width: 384px;
+  @include respond($lg) {
+    padding: 24px;
+  }
+
+  /* &Icon {
+    background: url('/theme/icons/icons_124x124.svg');
+    width: 124px;
+    height: 124px;
+  }
+
+  .icon {
+    &0 {
+      background-position: 0 -248px;
+    }
+
+    &1 {
+      background-position: -248px -372px;
+    }
+
+    &2 {
+      background-position: -124px -248px;
+    }
+  } */
+
+  &Icon {
+    font-size: 72px;
+    font-weight: 700;
+    background: $blue-gradient;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @include respond($mob) {
+      font-size: 64px;
+    }
+  }
+
+  &Text {
+    font-size: 16px;
+    text-align: left;
+    @include respond($mob) {
+      font-size: 14px;
+    }
+
+    .loanButtonWrap {
+      width: 100%;
+      margin-top: 8px;
+    }
+    button.loanButton {
+      width: auto;
+      max-width: none;
+      padding: 0;
+      color: $re-blue;
+      font-weight: 400;
+      text-decoration: underline;
+      background: none;
+      box-shadow: none;
+      justify-content: left;
+      transition: none;
+      border: none;
+      &:hover:not(:disabled) {
+        background: none;
+        color: $re-blue-dark;
+      }
+    }
+  }
+}
+
+.footnote {
+  font-size: 16px;
+  font-weight: 700;
+  color: $re-blue;
+  text-transform: uppercase;
+  text-align: center;
+  max-width: 848px;
+  margin-top: 40px;
+  @include respond($mob) {
+    font-size: 14px;
+    margin-top: 16px;
+  }
+}

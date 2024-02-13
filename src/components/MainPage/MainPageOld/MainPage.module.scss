@@ -1,0 +1,21 @@
+@import '@scss/service';
+//$mob: $md;
+$tab: $xxs, $xl;
+
+.tagsCloudContainer {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: center;
+  margin: 40px auto 80px;
+  @include respond($tab) {
+    margin: 20px auto 40px;
+    padding: 0 8px;
+  }
+}
+
+.anpcContainer {
+  width: 100%;
+  padding: 16px 0 8px;
+  text-align: center;
+}

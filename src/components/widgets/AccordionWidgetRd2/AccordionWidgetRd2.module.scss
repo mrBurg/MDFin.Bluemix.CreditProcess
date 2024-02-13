@@ -1,0 +1,226 @@
+@import '@scss/service';
+
+.section {
+  width: 100%;
+  max-width: $re-xl;
+
+  @include respond(sm) {
+    font-size: px2em(14px);
+  }
+
+  @include respond(xs) {
+    font-size: px2em(12px);
+  }
+}
+
+.title {
+  color: $re-blue;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 40px;
+  @include respond(xs) {
+    font-size: 24px;
+    margin: 0 0 16px;
+  }
+}
+
+.grayAccordion {
+  &Container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &Title {
+    color: $re-gray-dark;
+    background: $re-gray-light;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 16px;
+    padding: 24px;
+    border-radius: 12px;
+
+    cursor: pointer;
+    text-align: left;
+    //transition: background-color 0.2s;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    @include respond(xs) {
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    // &:hover {
+    //   box-shadow: 0px 0px 5px 0px rgba(227, 224, 227, 1);
+    // }
+
+    &Content {
+      flex-grow: 1;
+    }
+
+    &Icon {
+      display: block;
+      height: 36px;
+      width: 36px;
+      background: url('/theme/icons/blue-down-icon.svg') no-repeat;
+      // animation: fade-in 0.1s linear;
+      flex-shrink: 0;
+    }
+  }
+
+  &Panel {
+    color: $re-gray-dark;
+    font-size: 16px;
+    background: $re-gray-light;
+    border-radius: 0 0 12px 12px;
+    display: none;
+    padding: 0 24px 24px;
+    animation: fade-in 0.25s ease-in;
+    text-align: justify;
+    @include respond(xs) {
+      font-size: 14px;
+      padding-top: 0;
+    }
+
+    .item {
+      margin-top: 16px;
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &Title {
+        font-weight: 700;
+      }
+
+      &Text {
+        margin-top: 16px;
+        a {
+          color: $re-gray;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    a {
+      color: $re-gray-dark;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    ul {
+      list-style-position: inside;
+    }
+
+    .loanButtonWrap {
+      width: 100%;
+      margin-top: 16px;
+    }
+    button.loanButton {
+      width: auto;
+      max-width: none;
+      padding: 0;
+      color: $re-blue;
+      font-weight: 400;
+      text-decoration: underline;
+      background: none;
+      box-shadow: none;
+      justify-content: left;
+      transition: none;
+      border: none;
+      &:hover:not(:disabled) {
+        background: none;
+        color: $re-blue-dark;
+      }
+    }
+  }
+}
+
+.transparentAccordion {
+  &Container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &Title {
+    color: $re-gray;
+    background: $white;
+    font-size: 14px;
+    margin-top: 16px;
+    padding: 24px;
+    border: 1px solid $re-gray;
+    border-radius: 12px;
+
+    cursor: pointer;
+    text-align: left;
+    //transition: background-color 0.2s;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    @include respond(xs) {
+      font-size: 12px;
+      margin-top: 8px;
+    }
+
+    // &:hover {
+    //   box-shadow: 0px 0px 5px 0px rgba(227, 224, 227, 1);
+    // }
+
+    &Content {
+      flex-grow: 1;
+    }
+
+    &Icon {
+      display: block;
+      height: 36px;
+      width: 36px;
+      background: url('/theme/icons/gray-down-icon.svg') no-repeat;
+      // animation: fade-in 0.1s linear;
+      flex-shrink: 0;
+    }
+  }
+
+  &Panel {
+    color: $re-gray;
+    font-size: 16px;
+    background: $white;
+    border: 1px solid $re-gray;
+    border-top: 0;
+    border-radius: 0 0 12px 12px;
+    display: none;
+    padding: 0 24px 24px;
+    animation: fade-in 0.25s ease-in;
+    text-align: justify;
+    @include respond(xs) {
+      font-size: 12px;
+      padding-top: 0;
+    }
+
+    .item {
+      margin-top: 16px;
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &Title {
+        font-weight: 700;
+      }
+
+      &Text {
+        margin-top: 16px;
+        a {
+          color: $re-gray;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    ul {
+      list-style-position: inside;
+    }
+  }
+}

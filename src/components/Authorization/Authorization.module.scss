@@ -1,0 +1,130 @@
+@import '@scss/service';
+
+.logo {
+  width: 100%;
+  max-width: 293px;
+
+  &Container {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+  }
+}
+
+.fieldsContainer {
+  width: 100%;
+  max-width: 420px;
+  margin: auto;
+  @include respond(xs) {
+    width: 100%;
+  }
+}
+
+.authorization {
+  width: 100%;
+  max-width: $sm;
+  margin-top: 2em;
+  text-align: center;
+
+  @include respond(xs) {
+    margin-top: 3.31em;
+  }
+
+  .fieldset {
+    border: none;
+    padding: 0;
+    display: grid;
+    grid-row-gap: 1.5em;
+
+    @include respond(xs) {
+      width: auto;
+      grid-row-gap: 1.75em;
+    }
+  }
+
+  /* .input {
+    text-align: center;
+
+    &Widget {
+      text-align: center;
+      width: 100%;
+    }
+  } */
+
+  .inputSignUp {
+    @extend .input !optional;
+    font-size: 1em;
+    text-align: left;
+
+    &Widget {
+      text-align: left;
+      margin: 1.5em auto auto auto;
+      width: 100%;
+
+      @include respond(xs) {
+        margin: 1.88em auto auto auto;
+      }
+    }
+    &Widget:first-child {
+      margin: 0;
+    }
+  }
+
+  .button {
+    padding: 0.99em 1.5em;
+    margin-top: 2.22em;
+    width: 100%;
+  }
+}
+
+.inputWidget_label {
+  font-size: 3em;
+  font-weight: bold;
+  color: green;
+  &.notEmpty {
+    font-size: 2em;
+    color: hotpink;
+  }
+}
+
+.policyTab {
+  width: 100%;
+  margin-top: 0.7em;
+  text-align: justify;
+  font-size: 0.88em;
+  margin-top: 2.14em;
+}
+
+.marketingConfirmation {
+  margin-top: 1.43em;
+  display: flex;
+  align-items: flex-start;
+  font-size: 0.88em;
+
+  & .agree_check {
+    margin-top: 0.2em;
+  }
+
+  & .agree_text {
+    text-align: justify;
+
+    .link {
+      color: $blue;
+    }
+  }
+}
+
+.formTitle {
+  text-align: center;
+}
+
+.otp {
+  z-index: 10;
+  width: 100%;
+  position: relative;
+  padding-top: 4.25em;
+
+  @include respond(xs) {
+    padding-top: 3.94em;
+  }
+}

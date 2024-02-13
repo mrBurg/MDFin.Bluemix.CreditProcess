@@ -1,0 +1,15 @@
+@import '@scss/service';
+
+.link {
+  max-width: 200px;
+  min-width: 174px;
+
+  @include respond(sm) {
+    max-width: 174px;
+    max-height: 45px;
+  }
+}
+
+.img {
+  width: 100%;
+}

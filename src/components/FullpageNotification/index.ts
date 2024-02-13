@@ -1,0 +1,1 @@
+export { FullpageNotification } from './FullpageNotification';

@@ -1,0 +1,1 @@
+export { LoyaltyServiceMessage } from './LoyaltyServiceMessage';

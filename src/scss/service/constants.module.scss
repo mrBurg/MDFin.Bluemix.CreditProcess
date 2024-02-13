@@ -1,0 +1,122 @@
+$font-family: 'Fira Sans', sans-serif;
+$font-size: 16px;
+
+$prefixes: -webkit-, -moz-, -ms-, -o-;
+$transiton: all 0.2s;
+
+$xxs: 320px;
+$xs: 480px;
+$sm: 640px;
+$md: 768px; // ^Device
+$lg: 960px;
+$xl: 1200px;
+$re-xl: 1280px; //RE-design
+$xxl: 1440px;
+
+$black: #040404;
+$white: #ffffff;
+
+//RE-design colors:
+$re-blue-dark: #2b3e83;
+$re-blue: #2a70c8; //from old
+$re-yellow: #fec601; //from old
+$re-red: #ce1127;
+$re-gray-dark: #484951;
+$re-gray: #c6cad8;
+$re-gray-light: #f4f5f9;
+
+$loan-button-gradient: linear-gradient(
+  282deg,
+  #fec601 12.63%,
+  #ce1127 49.92%,
+  #2a70c8 92.33%
+);
+$blue-gradient: linear-gradient(36.16deg, #2a70c8 11.37%, #f4f5f9 100%);
+$yellow-gradient: linear-gradient(263deg, #fec601 10.75%, #fe9901 80.44%);
+$rainbowGradient: linear-gradient(
+    90deg,
+    rgba(139, 139, 146, 0) 0%,
+    #8b8b92 78.87%
+  ),
+  linear-gradient(192deg, #876733 12.63%, #782f39 49.92%, #39527b 92.33%);
+$grayGradient: linear-gradient(
+  90deg,
+  rgba(139, 139, 146, 0) 0%,
+  #8b8b92 78.87%
+);
+//
+
+$gray-dark: #373742;
+$gray: #707070;
+$gray-light: #e1e1e1;
+$gray-misty: #f6f7fb;
+
+$orange-dark: #dfa700;
+$orange: #fec601;
+$orange-light: #ffd174;
+$orange-misty: #fff69e;
+
+$blue-dark: #1256aa;
+$blue: #2a70c8; //#3175c9;
+$blue-light: #65a1ee;
+$blue-misty: #8bb5eb;
+
+$green-dark: #2d9031;
+$green: #4caf50;
+$green-light: #6bce6f;
+$green-misty: #b3ebaa;
+
+$red-dark: #af0008;
+$red: #ed1b22;
+$red-light: #ed3046;
+$red-misty: #eb7678;
+
+$form-border: #a8a8a8;
+
+$yellow: #fdfac8;
+
+$border-radius: 12px; //3px;
+
+$box-shadow: 3px 3px 3px transparentize($black, 0.8);
+
+:export {
+  black: $black;
+  white: $white;
+
+  gray-dark: $gray-dark;
+  gray: $gray;
+  gray-light: $gray-light;
+  gray-misty: $gray-misty;
+
+  orange-dark: $orange-dark;
+  orange: $orange;
+  orange-light: $orange-light;
+  orange-misty: $orange-misty;
+
+  blue-dark: $blue-dark;
+  blue: $blue;
+  blue-light: $blue-light;
+  blue-misty: $blue-misty;
+
+  green-dark: $green-dark;
+  green: $green;
+  green-light: $green-light;
+  green-misty: $green-misty;
+
+  red-dark: $red-dark;
+  red: $red;
+  red-light: $red-light;
+  red-misty: $red-misty;
+
+  form-border: $form-border;
+
+  yellow: $yellow;
+  originalFontSize: $font-size;
+  xxs: $xxs;
+  xs: $xs;
+  sm: $sm;
+  md: $md;
+  lg: $lg;
+  xl: $xl;
+  xxl: $xxl;
+}

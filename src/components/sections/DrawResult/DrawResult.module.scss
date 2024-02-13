@@ -1,0 +1,130 @@
+@import '@scss/service';
+
+.section {
+  width: 100%;
+  background-color: $blue;
+  color: $white;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 820px; //$xl;
+  margin: auto;
+  padding: 2.25em 0.5em 4.5em;
+  @include respond($md) {
+    padding: 3.75em 0.5em 3.75em;
+  }
+}
+
+.title {
+  font-size: 3.125em;
+  font-weight: 700;
+  text-align: center;
+  color: $orange;
+  @include respond($md) {
+    font-size: 2.25em;
+    br {
+      display: none;
+    }
+  }
+
+  p {
+    color: $orange;
+    display: inline-block;
+    font-weight: 400;
+    font-family: 'Kaushan Script', cursive;
+    @include respond($md) {
+      display: block;
+    }
+  }
+}
+
+.winnerItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 1.5em;
+  column-gap: 1em;
+  @include respond($md) {
+    flex-direction: column;
+    margin-top: 1.25em;
+  }
+}
+
+.youtubeWrap {
+  max-width: 562px;
+}
+
+.ytiframe {
+  width: 100%;
+  height: 319px;
+  max-width: 562px;
+  max-height: 319px;
+  @media only screen and (max-width: $sm) {
+    height: 204px; //173px;
+    max-height: 204px; //173px;
+    max-width: 359px; //304px;
+  }
+}
+
+.txtWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2.75em;
+  @include respond($md) {
+    flex-direction: column;
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .subTitle {
+    font-size: 2.25em;
+    font-weight: 700;
+    text-align: center;
+    @include respond($md) {
+      font-size: 2em;
+    }
+  }
+  .name {
+    font-size: 2.25em;
+    font-weight: 700;
+    color: $orange;
+    text-align: center;
+    @include respond($md) {
+      font-size: 2em;
+    }
+  }
+
+  span {
+    margin-left: 12px;
+  }
+}
+
+.footnote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5em;
+  margin-top: 1.75em;
+  @media only screen and (max-width: $sm) {
+    font-size: 1.25em;
+    margin-top: 1.2em;
+  }
+
+  a {
+    font-weight: 700;
+    color: $orange;
+    text-decoration: underline;
+    margin-top: 0.3em;
+  }
+}

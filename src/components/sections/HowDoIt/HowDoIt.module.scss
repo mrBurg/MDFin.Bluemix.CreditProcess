@@ -1,0 +1,76 @@
+@import '@scss/service';
+$mob: $md;
+$tab: $xxs, $xl;
+
+.section {
+  width: 100%;
+}
+
+.content {
+  max-width: $xl;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 60px auto;
+  @include respond($tab) {
+    margin: 20px 8px;
+  }
+}
+
+.title {
+  color: $blue;
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+
+  @include respond($mob) {
+    font-size: 24px;
+  }
+}
+
+.subtitle {
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  max-width: 600px;
+  margin-top: 24px;
+
+  @include respond($mob) {
+    font-size: 18px;
+    margin-top: 0;
+  }
+}
+
+.steps {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 36px;
+  row-gap: 24px;
+  column-gap: 24px;
+
+  @include respond($tab) {
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 540px;
+    margin-top: 24px;
+  }
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  align-items: center;
+  max-width: 246px;
+
+  &Icon {
+    display: flex;
+    flex-shrink: 0;
+  }
+
+  &Text {
+    font-size: 18px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,153 @@
+@import '@scss/service/';
+
+.section {
+  // background: url('/images/main-page/welcome/background.webp') center top
+  //   no-repeat;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  @include respond(md) {
+    // background-size: cover;
+  }
+}
+
+.sectionBg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  max-width: 1904px;
+  z-index: -1;
+
+  &Img {
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.content {
+  max-width: $xl;
+  margin: auto;
+  display: flex;
+  padding: 0.5em;
+  // align-items: flex-start;
+  column-gap: 1em;
+
+  @include respond(sm) {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1em;
+  }
+}
+
+.main {
+  &Content {
+    flex-grow: 1;
+    text-align: center;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include respond(md) {
+      margin-right: 1em;
+    }
+
+    @include respond(sm) {
+      margin-right: 0;
+    }
+  }
+
+  &Text {
+    font-size: 2.75em;
+    margin: 0;
+    font-weight: bold;
+
+    @include respond(xl) {
+      font-size: 2em;
+    }
+
+    @include respond(lg) {
+      font-size: 1.5em;
+    }
+
+    @include respond(md) {
+      font-size: 1.38em;
+    }
+
+    * {
+      line-height: 1.2em;
+    }
+  }
+}
+
+.description {
+  font-size: 3em;
+  font-weight: 300;
+
+  @include respond(xl) {
+    font-size: 2em;
+  }
+
+  @include respond(lg) {
+    font-size: 1.5em;
+  }
+
+  @include respond(md) {
+    font-size: 1.38em;
+  }
+}
+
+.steps {
+  width: 100%;
+  display: flex;
+  margin-top: 1em;
+
+  @include respond(md) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include respond(sm) {
+    display: none;
+  }
+}
+
+.step {
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &Icon {
+    background: url('/theme/icons/icons_56x56.svg');
+    width: 56px;
+    height: 56px;
+  }
+
+  .icon {
+    &0 {
+      background-position: -392px -56px;
+    }
+
+    &1 {
+      background-position: -168px -56px;
+    }
+
+    &2 {
+      background-position: -280px -56px;
+    }
+  }
+
+  &Text {
+    font-size: 1.5em;
+    font-weight: 300;
+  }
+}
+
+.productSelector {
+  flex-shrink: 0;
+}

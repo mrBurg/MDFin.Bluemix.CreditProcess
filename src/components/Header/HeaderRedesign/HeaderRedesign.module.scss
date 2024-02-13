@@ -1,0 +1,42 @@
+@import '@scss/service/';
+$tab: $xxs, $xl;
+
+.holder {
+  // min-height: 0;
+  height: 88px;
+  transition: all 0.2s;
+  @include respond($tab) {
+    height: 43px;
+  }
+
+  &Pinned {
+    .header {
+      top: 0;
+    }
+  }
+
+  /* &Compressed {
+    min-height: 3.06em;
+
+    .header {
+      position: fixed;
+      top: 0;
+      z-index: 9;
+    }
+  } */
+
+  &Blur {
+    @extend %hasBlur;
+  }
+}
+
+.header {
+  position: fixed;
+  // top: 0;
+  z-index: 9;
+  width: 100%;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+}

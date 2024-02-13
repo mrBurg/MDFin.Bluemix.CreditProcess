@@ -1,0 +1,31 @@
+@use "sass:selector";
+@import '@scss/service';
+
+.page {
+  &-title {
+    margin: 0.5em auto;
+    text-align: center;
+    transition: font-size 0.2s;
+    font-size: 2.25em;
+
+    @include respond(md) {
+      font-size: 1.88em;
+    }
+
+    @include respond(sm) {
+      font-size: 1.25em;
+    }
+  }
+
+  &-container {
+    @at-root #{selector.unify(div, &)} {
+      &_padding {
+        padding-top: 1.25em;
+      }
+    }
+  }
+
+  &-notification {
+    margin-top: 3.75em;
+  }
+}

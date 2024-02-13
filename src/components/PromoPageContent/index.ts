@@ -1,0 +1,1 @@
+export { PromoPageContent } from './PromoPageContent';

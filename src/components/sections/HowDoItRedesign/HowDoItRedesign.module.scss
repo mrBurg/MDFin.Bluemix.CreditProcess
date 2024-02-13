@@ -1,0 +1,133 @@
+@import '@scss/service';
+$mob: $md;
+
+.section {
+  // background: url('/images/main-page/welcome/background.webp') center top
+  //   no-repeat;
+  width: 100%;
+  // color: $white;
+}
+
+.content {
+  max-width: $re-xl;
+  margin: auto;
+  padding: 80px 16px 40px;
+  @include respond($mob) {
+    padding: 48px 16px 24px;
+  }
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  color: $re-blue;
+  text-align: center;
+
+  @include respond($mob) {
+    font-size: 24px;
+  }
+}
+
+.subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 16px auto 40px;
+  max-width: 540px;
+  text-align: center;
+
+  @include respond($mob) {
+    font-size: 14px;
+    margin: 8px 0 16px;
+  }
+}
+
+/* .description {
+  font-size: 3em;
+  margin: 1em 0;
+  font-size: 3em;
+  text-align: center;
+  font-weight: 600;
+
+  @include respond(xl) {
+    font-size: 2em;
+  }
+
+  @include respond(lg) {
+    font-size: 1.5em;
+  }
+
+  @include respond(md) {
+    font-size: 1.38em;
+  }
+} */
+
+.steps {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  row-gap: 16px;
+  column-gap: 16px;
+  margin: auto;
+  @include respond($mob) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &Even {
+    @include respond($lg) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      max-width: 480px; //328px;
+      justify-content: center;
+    }
+  }
+}
+
+.step {
+  // flex-basis: calc(33.33% - 0.5em);
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  align-items: center;
+  max-width: 178px;
+  @include respond($mob) {
+    row-gap: 8px;
+    max-width: 156px;
+  }
+
+  .icon {
+    display: flex;
+    flex-shrink: 0;
+    @include respond($mob) {
+      width: 52px;
+    }
+  }
+
+  /* &Icon {
+    background: url('/theme/icons/icons_124x124.svg');
+    width: 124px;
+    height: 124px;
+  }
+
+  .icon {
+    &0 {
+      background-position: 0 -372px;
+    }
+
+    &1 {
+      background-position: -496px -124px;
+    }
+
+    &2 {
+      background-position: -124px -372px;
+    }
+  } */
+
+  &Text {
+    text-align: center;
+    @include respond($mob) {
+      font-size: 14px;
+    }
+  }
+}

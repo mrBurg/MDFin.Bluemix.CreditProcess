@@ -1,0 +1,30 @@
+@import '@scss/service';
+
+.select {
+  font-size: inherit;
+  border-radius: 10px;
+  border: 1px solid $form-border;
+
+  &:global.select-widget--has-error {
+    border-color: $red;
+
+    .selectLabel {
+      color: $red;
+    }
+  }
+
+  &Control {
+    height: 100%;
+  }
+
+  &Label {
+    color: #707070;
+    position: absolute;
+    width: 100%;
+    top: 15%;
+    font-size: 0.75em;
+    padding-left: 1.5em;
+    // transition: all 0.2s;
+    // pointer-events: none;
+  }
+}

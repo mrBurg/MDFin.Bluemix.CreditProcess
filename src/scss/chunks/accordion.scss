@@ -1,0 +1,43 @@
+.ui.accordion {
+  width: 100%;
+
+  .title {
+    //margin-top: px2em(15px);
+
+    &.active {
+      .icon {
+        background: url('/theme/icons/icons_30x30.svg') -90px -30px no-repeat;
+      }
+
+      .gray {
+        &Title {
+          color: $re-blue;
+          border-radius: 12px 12px 0 0;
+        }
+
+        &Icon {
+          background: url('/theme/icons/yellow-up-icon.svg') no-repeat;
+        }
+      }
+
+      .transparent {
+        &Title {
+          color: $re-gray;
+          border-radius: 12px 12px 0 0;
+          border-bottom: 0;
+        }
+
+        &Icon {
+          background: url('/theme/icons/gray-down-icon.svg') no-repeat;
+          transform: rotateX(180deg);
+        }
+      }
+    }
+  }
+
+  .content {
+    &.active {
+      display: block;
+    }
+  }
+}

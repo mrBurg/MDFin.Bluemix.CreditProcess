@@ -1,0 +1,49 @@
+@import '@scss/service/';
+$tab: $xxs, $xl;
+
+.holder {
+  min-height: 6em;
+  transition: all 0.2s;
+
+  @include respond(md) {
+    min-height: 3.06em;
+  }
+
+  &Compressed {
+    min-height: 3.06em;
+
+    .header {
+      position: fixed;
+      top: 0;
+      z-index: 9;
+    }
+  }
+
+  &Blur {
+    @extend %hasBlur;
+  }
+}
+
+.header {
+  width: 100%;
+  box-shadow: 1px 1px 5px transparentize($black, 0.9);
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  background-color: $white;
+}
+
+/* .holderRedesign {
+  min-height: 0;
+  height: 88px;
+  @include respond($tab) {
+    height: 43px;
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    z-index: 9;
+    box-shadow: none;
+  }
+} */

@@ -1,0 +1,1 @@
+export { MainPageRedesign } from './MainPageRedesign';

@@ -1,0 +1,354 @@
+%hasBlur {
+  filter: blur(2px);
+  pointer-events: none;
+  user-select: none;
+}
+
+%big-shadow {
+  box-shadow: 0 0 px2em(50px) transparentize($black, 0.8);
+}
+
+%small-shadow {
+  box-shadow: 0 0 px2em(10px) transparentize($black, 0.8);
+}
+
+%shadow {
+  box-shadow: $box-shadow;
+}
+
+%input {
+  color: $black;
+  font-weight: 600;
+  width: 100%;
+  height: 100%;
+  border: 1px solid $form-border;
+  text-align: left;
+
+  &:disabled {
+    background: $gray-misty;
+    border: 1px solid $gray-misty;
+  }
+
+  &.error,
+  &.error:disabled {
+    border-color: $red;
+  }
+}
+
+%button_beauty_params {
+  color: $white;
+  font-weight: bold;
+  border: 2px solid #c39e1a;
+  background: linear-gradient(#ffd133, #fec601 45%, #e2b014 55%, #e2ab00);
+  box-shadow: 0.1em 0.1em 0.3em rgba(0, 0, 0, 0.3);
+  transition: $transiton;
+
+  &:hover:not(:disabled) {
+    background: linear-gradient(#eabf2e, #e8b503 45%, #cea114 55%, #ce9c02);
+  }
+}
+
+%button {
+  transition: $transiton;
+  border-radius: 10px;
+  background: $white;
+  border: 1px solid $gray;
+  box-shadow: none;
+  color: $gray-dark;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 500;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 0.3em 1em;
+  position: relative;
+  text-align: center;
+  text-shadow: none;
+  zoom: 1;
+
+  &:hover:not(:disabled) {
+    background: $gray-dark;
+    color: $white;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: auto;
+  }
+
+  &:global.button_big {
+    transition: $transiton;
+    padding: 1.1em 1.5em;
+  }
+
+  &:global.button_small {
+    font-size: 0.88em;
+  }
+
+  &:global.button_inline {
+    background: none;
+    border: none;
+    color: $blue-light;
+    text-decoration: none !important;
+
+    &:hover:not(:disabled) {
+      background: none;
+      color: $blue-dark;
+      text-decoration: underline !important;
+    }
+  }
+
+  &:global.button_beauty {
+    @extend %button_beauty_params;
+    font-size: 32px;
+    padding: 0.5em 1.5em;
+  }
+
+  &:global.button_beauty_reminder {
+    @extend %button_beauty_params;
+    font-size: 24px;
+    padding: 0.8em 7.5em;
+
+    @media (min-width: #{getSize(sm) + 1px}) and (max-width: getSize(lg)) {
+      padding: 0.8em 6em;
+    }
+    @media (min-width: #{getSize(xs) + 1px}) and (max-width: getSize(sm)) {
+      padding: 0.8em 3em;
+    }
+    @media (max-width: getSize(xs)) {
+      padding: 0.8em 2.4em;
+    }
+  }
+
+  &:global.button_beauty_green {
+    color: $white;
+    font-size: 24px;
+    font-weight: bold;
+    border: 2px solid #35ad3a;
+    background: linear-gradient(#58c75c, #4caf50 45%, #29862d 55%, #2d9031);
+    box-shadow: 0.1em 0.1em 0.3em rgba(0, 0, 0, 0.3);
+    max-width: 480px;
+    width: auto;
+    transition: $transiton;
+    padding: 0.6em 5em;
+
+    @media (max-width: getSize(lg)) {
+      padding: 0.6em 3.2em;
+    }
+    @media (max-width: getSize(sm)) {
+      width: 100%;
+      padding: 0.6em 0;
+    }
+
+    &:hover:not(:disabled) {
+      background: linear-gradient(#4dab50, #409243 45%, #206723 55%, #247127);
+    }
+  }
+
+  &:global.button_loan-button-floating {
+    transition: $transiton;
+    color: $gray-dark;
+    font-size: 24px;
+    font-weight: bold;
+    border: 1px solid $gray;
+    box-shadow: 0.1em 0.1em 0.3em rgba(0, 0, 0, 0.3);
+    background: linear-gradient(#ffffff, #cccccc 45%, #b5b5b5 55%, #b1afaf);
+    width: 90%;
+    padding: 0.3em 0 0.3em 0;
+  }
+
+  &:global.button_orange {
+    background: $orange;
+    border: none;
+
+    &:hover:not(:disabled) {
+      background: $orange-dark;
+    }
+  }
+
+  &:global.button_orange-light {
+    background: $orange-light;
+    border: none;
+
+    &:hover:not(:disabled) {
+      background: $orange-dark;
+    }
+  }
+
+  &:global.button_gray-light {
+    background: $gray-light;
+    border: none;
+
+    &:hover:not(:disabled) {
+      background: $gray-dark;
+    }
+  }
+
+  &:global.button_blue {
+    background: $blue;
+    border: none;
+    color: $white;
+    text-transform: uppercase;
+
+    &:hover:not(:disabled) {
+      background: $blue-dark;
+    }
+
+    &:disabled {
+      background: $white;
+      border: 1px solid $blue;
+      color: $blue;
+      opacity: 1;
+      cursor: auto;
+    }
+  }
+
+  &:global.button_blue-misty {
+    background: $blue-misty;
+    border: none;
+    color: $white;
+  }
+
+  &:global.button_green {
+    background: $green;
+    border: none;
+    color: $white;
+
+    &:hover:not(:disabled) {
+      background: $green-dark;
+    }
+  }
+
+  &:global.button_red {
+    background: $red;
+    border: none;
+    color: $white;
+
+    &:hover:not(:disabled) {
+      background: $red-dark;
+    }
+  }
+
+  &:global.button_red-light {
+    background: $red-light;
+    border: none;
+    color: $white;
+    &:hover:not(:disabled) {
+      background: $red-dark;
+    }
+  }
+
+  &:global.button__full-line {
+    width: 100%;
+  }
+}
+
+%button-gray {
+  border: 1.5px solid $gray;
+  background: linear-gradient(
+    $white,
+    lighten($black, 75%) 45%,
+    $form-border 55%,
+    lighten($form-border, 5%)
+  );
+  border-radius: 0.2em;
+  box-shadow: 0.1em 0.1em 0.3em transparentize($black, 0.7);
+  color: $gray-dark;
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: bold;
+  padding: 0.6em 2.5em;
+
+  &:hover:not(:disabled) {
+    color: $gray-dark;
+    background: linear-gradient(
+      darken($white, 15%),
+      lighten($black, 60%) 45%,
+      darken($form-border, 15%) 55%,
+      darken($form-border, 10%)
+    );
+  }
+}
+
+%button-gradient {
+  border: none;
+  background: $loan-button-gradient;
+  border-radius: 8px;
+  box-shadow: none;
+  color: $white;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 16px;
+
+  width: 100%;
+  min-width: 0;
+  max-width: 378px;
+  @media (max-width: getSize(sm)) {
+    // max-width: 328px;
+  }
+
+  &:hover:not(:disabled) {
+    background: $loan-button-gradient;
+    color: $white;
+    padding: 18px;
+    max-width: 418px;
+    @media (max-width: getSize(sm)) {
+      max-width: 345px;
+    }
+  }
+
+  &:disabled {
+    background: $re-gray;
+  }
+}
+
+%input-redesign {
+  color: $re-gray-dark;
+  font-weight: 400;
+  width: 100%;
+  height: 100%;
+  border: 1px solid $re-gray;
+  border-radius: 8px;
+  padding: 12px 18px;
+  text-align: left;
+
+  &:focus {
+    color: $re-gray-dark;
+
+    ~ :global.input-widget__label {
+      // ~ label {  //не працює
+      // top: 10%;
+      font-size: 12px;
+      color: $re-blue;
+    }
+  }
+
+  &:disabled {
+    border: 1px solid $re-gray;
+    background: $re-gray-light;
+    color: $re-gray;
+    ~ :global.input-widget__label {
+      color: $re-gray;
+    }
+  }
+
+  &.error,
+  &.error:disabled {
+    border-color: $re-red;
+  }
+  .InputWidget-input_error {
+    border-color: $re-red;
+  }
+
+  ~ :global.input-widget__label {
+    // ~ label {
+    // top: 35%;
+    // font-size: 12px;
+    color: $re-blue;
+    margin-left: 16px;
+  }
+}

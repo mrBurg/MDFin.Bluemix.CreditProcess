@@ -1,0 +1,143 @@
+@import '@scss/service';
+
+$mob: $md; //$lg;
+
+.content {
+  padding: 2.5em 6.5em;
+
+  @include respond($lg) {
+    padding: 1.5em 1em;
+  }
+}
+
+.date {
+  text-align: center;
+}
+
+.pageTitle {
+  color: $black;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+
+  span {
+    text-transform: none;
+  }
+
+  @include respond($mob) {
+    text-align: center;
+    align-self: center;
+  }
+}
+
+.section {
+  width: 100%;
+  margin: 1em 0;
+
+  h2 {
+    font-size: 1.3em;
+    font-weight: 700;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  ul,
+  ol {
+    text-align: justify;
+
+    li {
+      margin: 0.3em 0;
+    }
+  }
+
+  ul {
+    padding-left: 1.5em;
+    list-style: disc;
+  }
+
+  ol {
+    padding-left: 1em;
+  }
+
+  table {
+    width: 100%;
+    font-size: 0.75em;
+    border-spacing: 16px;
+
+    @include respond($mob) {
+      font-size: 0.5em;
+      border-spacing: 8px;
+    }
+
+    td {
+      padding: 0.5em;
+      border: 1px $blue solid;
+      border-radius: 0.5em;
+      text-align: left;
+      vertical-align: top;
+
+      &:first-child {
+        font-weight: 700;
+        width: 20%;
+      }
+    }
+  }
+
+  .textBlock {
+    margin-top: 1em;
+
+    div {
+      margin-top: 0.75em;
+      text-align: justify;
+    }
+  }
+
+  /* :global .tableWrap {
+    display: flex;
+    width: 100%;
+    overflow: auto;
+  } */
+
+  /* :global .blue {
+    min-width: 456px;
+    margin: 0 12%;
+
+    @include respond($xl) {
+      margin: 0;
+    }
+
+    tr {
+      height: 40px;
+
+      &:first-child {
+        background-color: $blue;
+        color: $white;
+      }
+    }
+
+    td {
+      text-align: center;
+      vertical-align: middle;
+
+      &:nth-child(1),
+      &:nth-child(2) {
+        width: 16%;
+      }
+      &:nth-child(3) {
+        width: 32%;
+      }
+    }
+  } */
+}
+
+.footerWrap {
+  width: 100%;
+  margin-bottom: 2.5em;
+
+  @include respond($mob) {
+    padding: 0 1em 1.5em;
+  }
+}

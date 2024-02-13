@@ -1,0 +1,1 @@
+export { TagsCloudWidget } from './TagsCloudWidget';

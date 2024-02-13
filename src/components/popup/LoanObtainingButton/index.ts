@@ -1,0 +1,1 @@
+export { LoanObtainingButton } from './LoanObtainingButton';

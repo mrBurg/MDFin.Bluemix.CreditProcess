@@ -1,0 +1,1 @@
+export { CookiesRedesign } from './CookiesRedesign';

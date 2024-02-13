@@ -1,0 +1,57 @@
+@import '@scss/service';
+@import '../Client.module.scss';
+
+.serviceMessage {
+  margin-top: 0.5em;
+}
+
+.tabs {
+  padding: 0 2.19em;
+  width: 100%;
+}
+
+.documents {
+  @extend .clientForm;
+  max-width: 420px;
+  flex: 1;
+
+  .attachments {
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+  }
+
+  .fullrow {
+    flex-basis: 100%;
+  }
+
+  .title {
+    color: $black;
+    text-align: center;
+    font-size: 0.875em;
+    font-weight: normal;
+    margin-top: 2.2em;
+    font-weight: bold;
+
+    @include respond($md) {
+      font-size: 1em;
+      margin-top: 2.92em;
+    }
+  }
+}
+
+.accounts {
+  margin: 2em 0 1em;
+}
+
+.buttonWrap {
+  margin-top: 6.93em;
+  margin-bottom: 8.8em;
+
+  @include respond($xs) {
+    margin-top: 2.43em;
+    margin-bottom: 2.9em;
+  }
+}

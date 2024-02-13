@@ -1,0 +1,32 @@
+@import '@scss/service';
+
+.tabs {
+  width: 100%;
+  display: flex;
+  font-size: 1em;
+  justify-content: center;
+  align-items: center;
+  max-width: 420px;
+  margin: 3em auto 0;
+  justify-content: space-between;
+  grid-gap: 0.63em;
+
+  @include respond(sm) {
+    font-size: 0.9em;
+  }
+}
+
+.tab {
+  content: '';
+  border-bottom: 2px solid $gray-light;
+  flex-grow: 1;
+  width: 100%;
+  max-width: 75px;
+  list-style: none;
+  text-align: center;
+}
+
+.currentTab {
+  border-bottom-color: $blue-light;
+  color: $blue-light;
+}

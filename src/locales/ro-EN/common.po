@@ -1,0 +1,211 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: MDFin\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: 
+msgid "Site Title"
+msgstr "Getting loan is easy!"
+
+#: 
+msgid "Contacts"
+msgstr "Contacts"
+
+#: 
+msgid "FAQ"
+msgstr "FAQ"
+
+#: 
+msgid "Blog"
+msgstr "Blog"
+
+#: 
+msgid "Repayment"
+msgstr "Repayment"
+
+#: 
+msgid "Sign In"
+msgstr "Log In"
+
+#. USD
+#. Unicode U+0024
+#. HTML &#36; or &#x24;
+#. UTF-16 0x24
+#. URL %24
+#: 
+msgid "Currency"
+msgstr "$"
+
+#: 
+msgid "More"
+msgstr "More"
+
+#: 
+msgid "Sign Up"
+msgstr "Registration"
+
+#: 
+msgid "Register Loan"
+msgstr "Register Loan"
+
+#: 
+msgid "Start Loan"
+msgstr "Start Loan"
+
+#: 
+msgid "Enter Phone Number"
+msgstr "Enter phone number"
+
+#: 
+msgid "Confirm"
+msgstr "Confirm"
+
+#: 
+msgid "amount"
+msgstr "loan amount"
+
+#: 
+msgid "term"
+msgstr "loan term"
+
+#: 
+msgid "extensionAmount"
+msgstr "Extension amount"
+
+#: 
+msgid "totalAmount"
+msgstr "Amount of payment"
+
+#: 
+msgid "dateTo"
+msgstr "Payment date"
+
+#: 
+msgid "appnum"
+msgstr "Agreements"
+
+#: 
+msgid "Day"
+msgid_plural "Days"
+msgstr[0] "day"
+msgstr[1] "days"
+
+#: 
+msgid "Second"
+msgid_plural "Seconds"
+msgstr[0] "second"
+msgstr[1] "seconds"
+
+#: 
+msgctxt "Will be redirected"
+msgid "%d second"
+msgid_plural "%d seconds"
+msgstr[0] "You will be redirected in %d second"
+msgstr[1] "You will be redirected in %d seconds"
+
+#: 
+msgid "lastPaymentDate"
+msgstr "Last payment date"
+
+#: 
+msgid "lastPaymentAmount"
+msgstr "Last Payment Amount"
+
+#: 
+msgid "dealNo"
+msgstr "Agreements"
+
+#: 
+msgid "toPay"
+msgstr "Pay"
+
+#: 
+msgid "loanAgreement"
+msgstr "Loan Agreement"
+
+#: 
+msgid "maskedName"
+msgstr "Name"
+
+#: 
+msgid "totalAmountActions"
+msgstr "The total amount"
+
+#: 
+msgid "About Loan"
+msgstr "About Loan"
+
+#: 
+msgid "Logout"
+msgstr "Logout"
+
+#: 
+msgid "closingDate"
+msgstr "Closing Date"
+
+#: 
+msgid "closingAmount"
+msgstr "Closing Amount"
+
+#: 
+msgid "paymentAmount"
+msgstr "Payment Amount"
+
+#: 
+msgid "payment"
+msgstr "Payment"
+
+#: 
+msgid "Enter the amount"
+msgstr "Enter the amount"
+
+#: 
+msgid "or"
+msgstr "or"
+
+#: 
+msgid "Personal information"
+msgstr "Personal information"
+
+#: 
+msgid "Activity"
+msgstr "Activity"
+
+#: 
+msgid "Month"
+msgid_plural "Months"
+msgstr[0] "Month"
+msgstr[1] "Months"
+
+#: 
+msgid "accept"
+msgstr "Accept"
+
+#: 
+msgid "decline"
+msgstr "Decline"
+
+#: 
+msgid "noOptions"
+msgstr "No options"
+
+#:
+msgid "hotlinePhone"
+msgstr "+40 318 18 18 18"
+
+#:
+msgid "facebookUrl"
+msgstr "https://www.facebook.com/profile.php?id=100089218688915"
+
+#:
+msgid "instagramUrl"
+msgstr "https://www.instagram.com/horacredit.ro"
+
+#:
+msgid "youtubeUrl"
+msgstr "https://youtube.com/@horacredit_ro"

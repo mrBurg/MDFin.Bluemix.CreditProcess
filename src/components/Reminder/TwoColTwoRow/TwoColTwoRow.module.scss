@@ -1,0 +1,125 @@
+@import '@scss/service';
+$mob: 860px; //640px;
+
+.reminder {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  height: 100%;
+  width: 100%;
+  min-height: 320px;
+  min-width: 320px;
+  justify-content: center;
+  left: 0;
+  top: 0;
+  position: fixed;
+  z-index: 1100;
+
+  &__container {
+    // background: url('/images/reminder/wave.png') right top 15px repeat-x #ffe37f;
+    border-radius: 7px;
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+
+    max-width: 774px;
+    min-width: 238px;
+    max-height: 271px; //336px;
+    min-height: 271px;
+    width: 90%;
+    height: 90%;
+    position: relative;
+
+    @include respond($mob) {
+      background: url('/images/reminder/wave.png') right bottom 10px repeat-x
+        #ffe37f;
+      max-height: 336px;
+      width: 238px;
+      height: 336px;
+    }
+  }
+
+  &__content {
+    background: url('/images/reminder/wave.png') right top 15px repeat-x #ffe37f;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    height: 100%;
+    line-height: normal;
+    position: relative;
+    justify-content: center;
+
+    @include respond($mob) {
+      flex-direction: column-reverse;
+      justify-content: space-between;
+    }
+  }
+
+  &__footer {
+    // display: flex;
+    // align-items: flex-end;
+    // position: relative;
+
+    // @include respond($mob) {
+    //   flex-direction: column;
+    // }
+
+    &_text {
+      flex-grow: 1;
+      font-size: 1.6em;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+
+      @include respond($mob) {
+        font-size: 1.2em;
+        text-align: center;
+        justify-content: start;
+      }
+    }
+
+    &_more {
+      background: url('/images/reminder/bg_money.png') right no-repeat
+        transparent;
+      width: 57%;
+      height: 100%;
+
+      @include respond($mob) {
+        background: url('/images/reminder/bg_money_m.png') no-repeat transparent;
+        width: 100%;
+        height: 50%;
+      }
+    }
+  }
+
+  &LoanButton {
+    cursor: pointer;
+    font-size: 0.8em;
+    padding: 0.5em 2em !important;
+    margin-top: 15px;
+    background: #e1160b;
+    border: none;
+    border-radius: 10px;
+    color: $white;
+    width: auto;
+
+    @include respond(xs) {
+      font-size: 0.9em;
+    }
+  }
+
+  &__close {
+    background: transparent url('/images/reminder/close.png') no-repeat;
+    //background: transparent url('/theme/icons/icons_16x16.svg') 0px -48px no-repeat;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 10px;
+    right: 10px;
+    &:hover {
+      transform: rotate(20deg);
+    }
+  }
+}

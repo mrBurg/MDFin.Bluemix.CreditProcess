@@ -1,0 +1,42 @@
+@import '@scss/service';
+
+.footer {
+  font-size: 1em;
+  font-weight: 300;
+  width: 100%;
+  max-width: $xl;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  padding: 0.5em;
+  justify-content: center;
+
+  @include respond(md) {
+    flex-direction: column;
+  }
+
+  &Blur {
+    @extend %hasBlur;
+  }
+
+  &.less {
+    font-size: inherit;
+    // @extend %big-shadow;
+  }
+}
+
+.container {
+  max-width: $md;
+  text-align: center;
+  color: $gray;
+  flex-basis: 100%;
+
+  @include respond(xs) {
+    font-size: 0.75em;
+  }
+}
+
+.link {
+  color: $blue;
+  text-decoration: underline;
+}

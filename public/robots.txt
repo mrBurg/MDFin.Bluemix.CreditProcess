@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /_next/
+Disallow: /sign-in
+Disallow: /sign-up
+
+
+
+Host: https://horacredit.ro
+Sitemap: https://horacredit.ro/sitemap.xml

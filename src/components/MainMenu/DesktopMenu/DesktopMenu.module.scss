@@ -1,0 +1,59 @@
+@import '@scss/service/';
+
+.desktop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1em;
+  max-width: $xl;
+  margin: auto;
+  padding: 1.5em;
+  transition: all 0.2s;
+  width: 100%;
+  background-color: $white;
+
+  &Compressed {
+    padding: 0.5em;
+
+    .logo {
+      width: 8%;
+    }
+  }
+
+  &Less {
+    justify-content: center;
+  }
+}
+
+.logo {
+  width: 100%;
+  transition: all 0.2s;
+  line-height: 0;
+}
+
+.nav {
+  flex-grow: 1;
+  margin: 0 3%;
+  justify-content: space-between;
+  display: flex;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: $blue;
+  margin: 0 0.5em;
+  border-bottom: 3px solid transparent;
+  padding-top: 3px;
+  transition: border-bottom 0.2s;
+
+  &:hover {
+    border-bottom-color: $orange;
+    color: $blue;
+  }
+}
+
+.active {
+  border-bottom-color: $orange;
+}

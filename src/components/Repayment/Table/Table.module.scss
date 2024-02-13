@@ -1,0 +1,47 @@
+@import '../Repayment.module.scss';
+
+.payment {
+  &Table {
+    width: 100%;
+    table-layout: fixed;
+    font-size: 1.1em;
+    line-height: 2.37em;
+  }
+}
+
+.input {
+  border: 1px solid $gray;
+  padding: 0.5em;
+  background-color: transparent;
+
+  &Widget {
+    width: 2em;
+    min-width: 2em;
+  }
+}
+
+.button {
+  @extend %button;
+  border: 2px solid $green;
+  font-size: 1.5em;
+  background: linear-gradient(
+    $green-light,
+    $green-light 45%,
+    $green-dark 55%,
+    $green
+  );
+  color: $white;
+  font-weight: bold;
+  display: block;
+  margin: 1em auto 0;
+  padding: 0.6em 5em;
+
+  &:hover:not(:disabled) {
+    background: linear-gradient(
+      $green,
+      $green 45%,
+      $green-dark 55%,
+      $green-dark
+    );
+  }
+}

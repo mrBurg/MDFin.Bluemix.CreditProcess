@@ -1,0 +1,310 @@
+@import '@scss/service';
+
+$mob: $lg; //$md;
+
+.welcome {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  &Bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #ececec;
+    z-index: -1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+  }
+}
+
+.content {
+  width: 100%;
+  max-width: $xxl;
+  min-height: 600px;
+  display: flex;
+  justify-content: space-between;
+  padding: 2.5em 7em 0;
+  overflow: hidden;
+  @include respond($xxl) {
+    padding: 2.5em 3em 0;
+  }
+  @include respond($mob) {
+    flex-direction: column;
+    align-items: center;
+    padding: 1em 0.5em 0.5em;
+  }
+}
+
+.main {
+  &Content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: center;
+    max-width: 493px;
+    row-gap: 1.5em;
+    @include respond($xl) {
+      max-width: 320px;
+    }
+    @include respond($mob) {
+      max-width: 360px;
+      row-gap: 0.5em;
+      padding-bottom: 3.5em;
+    }
+
+    .img {
+      position: absolute;
+      display: flex;
+      bottom: 0;
+      z-index: -1;
+      right: -80%;
+      overflow: hidden;
+      @include respond($xl) {
+        right: -110%;
+      }
+
+      @include respond($mob) {
+        // bottom: 0;
+        right: 0;
+        max-height: 232px;
+        max-width: 160px;
+      }
+    }
+  }
+
+  &Text {
+    font-size: 3em;
+    font-weight: 700;
+    margin: 0;
+    @include respond($xl) {
+      font-size: 2em;
+    }
+  }
+
+  &Image {
+    @include respond($mob) {
+      max-width: 199px;
+    }
+  }
+}
+
+.productSelector {
+  flex-shrink: 0;
+}
+
+.calc {
+  z-index: 10;
+}
+
+.pageContainer.pageContainer {
+  // max-width: 1220px;
+  margin-bottom: 0;
+  @media only screen and (max-width: $xs) {
+    padding: 0 1em;
+  }
+}
+
+.contentWrap {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+.loanButton.loanButton {
+  max-width: 270px;
+  height: 76px;
+  color: $white;
+  font-size: 1.5em;
+  margin: auto auto 1.5em;
+  @include respond($mob) {
+    margin: 0.675em auto 0.7em;
+  }
+}
+
+.howToGet {
+  margin-top: 2.5em;
+  @include respond($mob) {
+    margin-top: 1em;
+  }
+
+  .head {
+    display: flex;
+    column-gap: 1.5em;
+    @include respond($mob) {
+      flex-direction: column;
+      row-gap: 1em;
+    }
+
+    .title {
+      display: flex;
+      align-items: center;
+      text-align: end;
+      font-size: 2.75em;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: $blue;
+      width: 100%;
+      @include respond($mob) {
+        font-size: 2em;
+        text-align: center;
+      }
+    }
+
+    .subTitle {
+      position: relative;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5em;
+
+      padding: 2em 0;
+      @include respond($mob) {
+        font-size: 1em;
+        padding: 1.25em 0;
+      }
+
+      span {
+        text-align: center;
+      }
+
+      p {
+        font-size: 1.5em;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $blue;
+      }
+
+      &Bg {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        overflow: hidden;
+
+        &Img {
+          display: flex;
+          justify-content: center;
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .blocks {
+    display: flex;
+    width: 100%;
+    column-gap: 1.25em;
+    margin-top: 2.5em;
+    @include respond($mob) {
+      flex-direction: column;
+      margin-top: 1em;
+      row-gap: 1em;
+    }
+
+    .block {
+      &Wrap {
+        width: 100%;
+        background-color: #eeeeee;
+        border-radius: 16px;
+      }
+
+      &Title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 2.75em;
+        font-weight: 700;
+        text-transform: uppercase;
+        background-color: $blue;
+        border-radius: 16px 16px 0 0;
+        color: $orange;
+        padding: 0.9em;
+        @include respond($mob) {
+          font-size: 2em;
+          padding: 0.75em;
+        }
+      }
+
+      &Items {
+        display: flex;
+        flex-direction: column;
+        background-color: #eeeeee;
+        border-radius: 0 0 16px 16px;
+        padding: 2em 6.5em 2.5em;
+        row-gap: 1em;
+        min-height: 350px;
+        @include respond(1135px) {
+          min-height: 455px;
+        }
+        @include respond($mob) {
+          padding: 1.5em 2.5em 1em;
+          min-height: 0; //380px;
+        }
+
+        .item {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          column-gap: 1em;
+
+          &Image {
+            font-size: 4em;
+            font-weight: 700;
+            color: $orange;
+            @include respond($mob) {
+              font-size: 2.5em;
+            }
+          }
+
+          &Text {
+            font-size: 1.5em;
+            @include respond($mob) {
+              font-size: 1em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.terms {
+  width: 100%;
+  text-align: center;
+  margin: 16px 0 0;
+  color: $gray;
+  font-weight: 300;
+  @include respond(480px) {
+    font-size: 0.75em;
+  }
+}
+
+.anpcContainer {
+  width: 100%;
+  padding: 16px 0 8px;
+  text-align: center;
+}

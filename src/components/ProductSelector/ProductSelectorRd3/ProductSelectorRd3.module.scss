@@ -1,0 +1,46 @@
+@import '@scss/service';
+$mob: $sm;
+$tab: $xxs, $xl;
+
+.productSelector {
+  width: 410px;
+  overflow: hidden;
+  border-radius: 8px;
+  padding: 32px 16px;
+  background-color: $re-gray-light;
+  display: flex;
+  flex-direction: column;
+  // row-gap: 8px;
+  @include respond($tab) {
+    width: 100%;
+    min-width: 288px;
+    max-width: $md;
+    margin: auto;
+  }
+  @include respond($mob) {
+    max-width: 360px;
+  }
+
+  &Preloader {
+    width: 410px;
+    align-self: center;
+    display: flex;
+  }
+
+  .loyaltyCode {
+    background-color: $white;
+  }
+
+  .loan {
+    &ButtonWrap {
+      display: flex;
+      min-height: 59px;
+      background-color: $white;
+    }
+
+    &Button {
+      @extend %button-gradient;
+      margin: auto;
+    }
+  }
+}

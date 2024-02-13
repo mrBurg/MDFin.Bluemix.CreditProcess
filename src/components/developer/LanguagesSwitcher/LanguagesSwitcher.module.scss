@@ -1,0 +1,30 @@
+@import '@scss/service';
+
+.language {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  gap: 0.5em;
+
+  .item {
+    flex: 1 0;
+  }
+
+  .button {
+    color: $white;
+    background-color: $black;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+    padding: 0.3em;
+    user-select: none;
+    border: 1px solid $white;
+    border-radius: 7px;
+    width: 100%;
+
+    &.current,
+    &:hover {
+      background-color: $white;
+      color: $black;
+    }
+  }
+}

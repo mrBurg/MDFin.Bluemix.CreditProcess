@@ -1,0 +1,90 @@
+@import '@scss/service/';
+
+.contactInfo {
+  // display: flex;
+
+  &Button {
+    display: flex;
+    border: none;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    background: none;
+
+    &:hover:not(:disabled) {
+      background: inherit;
+      transform: scale(1.1);
+    }
+
+    * {
+      pointer-events: none;
+    }
+  }
+
+  &Menu {
+    z-index: 1;
+    position: absolute;
+    right: 45%;
+    transform: translateX(45%);
+    display: flex;
+    flex-direction: column;
+    padding: 16px 0;
+    width: max-content;
+    background-color: $white;
+    margin-top: 12px;
+    border: 1px solid $re-blue;
+    border-radius: 8px;
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      right: 50%;
+      left: 50%;
+      border: solid transparent;
+    }
+    &:before {
+      top: -18px;
+      border-bottom: solid $re-blue;
+      border-width: 9px;
+    }
+    &:after {
+      top: -16px;
+      border-bottom: solid $white;
+      border-width: 9px;
+    }
+
+    &Holder {
+      position: relative;
+    }
+
+    .topBlock {
+      display: flex;
+      flex-direction: column;
+      row-gap: 4px;
+      padding: 0 24px;
+    }
+
+    .bottomBlock {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 24px;
+    }
+
+    .title {
+      text-align: center;
+      color: $re-gray-dark;
+    }
+
+    .phone {
+      color: $re-blue;
+      font-weight: 700;
+    }
+
+    hr {
+      border: 0;
+      height: 0;
+      border-top: 1px solid $re-gray;
+      margin: 4px 0 8px;
+    }
+  }
+}

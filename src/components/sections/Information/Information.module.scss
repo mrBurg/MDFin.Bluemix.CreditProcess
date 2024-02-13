@@ -1,0 +1,25 @@
+@import '@scss/service';
+
+.section {
+  width: 100%;
+}
+
+.content {
+  max-width: $xl;
+  margin: auto;
+  padding: 0.5em;
+}
+
+.text {
+  color: $gray;
+  font-size: 1.5em;
+  text-align: justify;
+
+  @include respond(xs) {
+    font-size: 1.13em;
+  }
+}
+
+.link {
+  font-weight: bold;
+}

@@ -1,0 +1,10 @@
+@import './../../Client.module.scss';
+
+.additionalFields {
+  @extend .clientForm;
+  max-width: $sm;
+
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+}

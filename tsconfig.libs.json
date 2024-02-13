@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "public/libs/",
+    "removeComments": true,
+    "rootDir": "src/libs/public/",
+    "target": "ES5",
+    "strict": true
+  },
+  "exclude": ["node_modules"],
+  "include": ["src/libs/public/**/*"]
+}

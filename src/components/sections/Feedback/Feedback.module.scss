@@ -1,0 +1,113 @@
+@import '@scss/service';
+
+.feedback {
+  @extend %shadow;
+  display: flex;
+  padding: px2em(30px);
+  max-width: $lg;
+  width: 100%;
+  background-color: $white;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.container {
+  max-width: $lg;
+  display: flex;
+  width: 100%;
+
+  @include respond(xs) {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+
+.logo,
+.contacts {
+  @include respond(md) {
+    flex-grow: 1;
+    width: 50%;
+  }
+
+  @include respond(xs) {
+    width: 100%;
+  }
+}
+
+.logo {
+  flex-grow: 2;
+  text-align: center;
+}
+
+.contacts {
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+
+  @include respond(xs) {
+    margin-bottom: px2em(20px);
+    max-width: px2em(210px);
+  }
+
+  &Item {
+    width: 50%;
+    margin-bottom: px2em(20px);
+    white-space: nowrap;
+
+    @include respond(md) {
+      width: 100%;
+      margin-bottom: px2em(10px);
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background: url('/theme/icons/icons_16x16.svg') 0 -64px no-repeat;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+  }
+}
+
+.emails,
+.phones {
+  a {
+    text-decoration: none;
+    color: $black;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+$index: 0;
+@each $item in (emails, phones, workHour) {
+  .#{$item} {
+    &:before {
+      background-position-x: $index * -16px;
+    }
+  }
+
+  $index: $index + 1;
+}
+
+.doc {
+  width: 100%;
+
+  .link {
+    font-weight: bold;
+    text-decoration: none;
+    color: $black;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.policy {
+  width: 95%;
+  margin: 1em auto 0;
+
+  &Title {
+    margin-top: 3.3em;
+    margin-bottom: 1.5em;
+    text-align: center;
+    font-size: 0.88em;
+  }
+}
+
+.conditions {
+  margin: 1em auto;
+}
+
+.agreement {
+  display: flex;
+  margin-bottom: 0.5em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

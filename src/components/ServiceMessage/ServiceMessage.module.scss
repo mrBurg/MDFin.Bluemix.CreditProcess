@@ -1,0 +1,278 @@
+@import '@scss/service';
+
+// .slick-slider.slick-slider {
+//   width: 100%;
+// }
+
+.slider {
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: center; //space-between;
+  width: 100%;
+  max-height: 92px;
+}
+
+.default {
+  width: 100%;
+  font-size: 1.2em;
+  font-weight: 700;
+  text-align: center;
+  background-color: $red-misty;
+  height: 52px;
+  @include respond(md) {
+    font-size: 0.935em;
+    height: 92px;
+  }
+
+  .wrap {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  br {
+    content: '';
+    display: inline;
+    @include respond(md) {
+      display: block;
+    }
+  }
+}
+
+.loyaltyMessage {
+  // display: flex; //!important;
+  padding: 4px 14px;
+  color: $white;
+  background-color: $blue;
+  line-height: 21px;
+  @include respond(md) {
+    font-size: 0.875em;
+  }
+
+  .image {
+    @include respond(md) {
+      width: 100%; //26%;
+      max-width: 69px; //100px;
+      height: 84px; //76px;
+      background: transparent url('./images/loyalty.png') center no-repeat;
+      margin-right: 1em;
+    }
+  }
+
+  span {
+    text-align: center;
+    @include respond(md) {
+      text-align: left;
+    }
+  }
+
+  :global .tag_accent {
+    color: $orange;
+  }
+
+  .copyButton {
+    background: none;
+    border: none;
+    margin: 0 0.5em;
+    vertical-align: sub;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+
+    &:hover {
+      background: none;
+    }
+
+    svg {
+      @include respond(md) {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+}
+
+.vespaContest {
+  padding: 0 1em;
+  color: $white;
+  background-color: #010157;
+  line-height: 22px;
+  @include respond(md) {
+    font-size: 0.9375em;
+    padding: 0;
+  }
+
+  .image {
+    @include respond(md) {
+      width: 100%;
+      max-width: 100px;
+      height: 76px;
+      background: transparent url('/images/vespa-slider.png') center / cover
+        no-repeat;
+      margin-right: 0.5em;
+    }
+  }
+
+  :global .tag_accent {
+    color: $orange;
+    font-size: 1.35em;
+    font-weight: 400;
+    font-family: 'Kaushan Script', cursive;
+    @include respond(md) {
+      font-size: 1.5em;
+    }
+  }
+
+  a {
+    font-size: 0.6em;
+    font-weight: 400;
+    color: $white;
+    text-decoration: underline;
+    display: inline;
+    margin-left: 1em;
+    @include respond(md) {
+      font-size: 0.8em;
+      margin-left: 0;
+    }
+  }
+}
+
+.hollydaysHappy,
+.hollydaysHappy_postPromo {
+  padding: 4px 8px;
+  font-size: 1.25em;
+  color: $white;
+  background-color: #014701;
+  @include respond(md) {
+    font-size: 0.813em;
+  }
+
+  .image {
+    @include respond(md) {
+      width: 100%;
+      max-width: 110px;
+      height: 84px;
+      background: transparent url('./images/car-slider.png') center / contain
+        no-repeat;
+      margin-right: 1em;
+    }
+  }
+
+  span {
+    line-height: 100%;
+    @include respond(md) {
+      max-width: 181px;
+    }
+  }
+
+  :global .tag_accent {
+    color: $orange;
+    font-size: 1.3em;
+    line-height: 100%;
+    @include respond(md) {
+      font-size: 2.3em;
+    }
+  }
+
+  br {
+    margin-left: 16px;
+    @include respond(md) {
+      margin: 0;
+    }
+  }
+
+  a {
+    font-size: 0.6em;
+    font-weight: 400;
+    color: $white;
+    text-decoration: underline;
+    display: inline;
+    @include respond(md) {
+      font-size: 0.9em;
+    }
+  }
+}
+
+.hollydaysHappy_postPromo {
+  @include respond(md) {
+    font-size: 0.875em;
+  }
+  .image {
+    @include respond(md) {
+      width: 100%;
+      max-width: 160px;
+      height: 84px;
+      background: transparent url('./images/car-post-promo.png') center /
+        contain no-repeat;
+      margin-right: 1em;
+    }
+  }
+
+  :global .tag_accent {
+    text-transform: uppercase;
+  }
+
+  br {
+    margin: 0;
+  }
+
+  a {
+    margin-left: 24px;
+    @include respond(md) {
+      margin-left: 0;
+    }
+  }
+}
+
+.reactivationCreditLine {
+  color: $gray-dark;
+  background-color: $orange;
+
+  .wrap {
+    @include respond(md) {
+      padding-right: 1em;
+    }
+  }
+
+  .image {
+    @include respond(md) {
+      width: 100%;
+      max-width: 82px;
+      height: 92px;
+      background: transparent url('./images/money-man.png') left top / contain
+        no-repeat;
+    }
+  }
+}
+
+.valentine23 {
+  color: $white;
+  background-color: #131723;
+  line-height: 21px;
+  @include respond(md) {
+    font-size: 0.875em;
+  }
+
+  .image {
+    @include respond(md) {
+      width: 100%;
+      max-width: 107px;
+      height: 90px;
+      background: transparent url('./images/valentine23.png') center no-repeat;
+      // margin-right: 1em;
+    }
+  }
+
+  .wrap {
+    padding-right: 0.75em;
+  }
+
+  span {
+    text-align: center;
+    @include respond(md) {
+      text-align: left;
+    }
+  }
+}

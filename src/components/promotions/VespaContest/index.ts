@@ -1,0 +1,1 @@
+export { VespaContest } from './VespaContest';

@@ -1,0 +1,74 @@
+@import '@scss/service';
+
+.clientForm {
+  font-size: 1em;
+  max-width: 420px; //$sm;
+  width: 100%;
+
+  @include respond(md) {
+    font-size: 0.88em;
+  }
+
+  .title {
+    text-align: center;
+    margin-top: 2.4em;
+    font-weight: 600;
+    font-size: 0.88em;
+
+    svg {
+      vertical-align: middle;
+    }
+  }
+
+  .fields {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include respond(xs) {
+      flex-direction: column;
+    }
+  }
+
+  .input {
+    &Widget {
+      width: 48%;
+      margin-top: 1.5em;
+
+      @include respond(xs) {
+        width: 100%;
+      }
+    }
+  }
+
+  .select,
+  .inputMask {
+    &Widget {
+      width: 48%;
+      margin-top: 1.5em;
+
+      @include respond(xs) {
+        width: 100%;
+      }
+    }
+  }
+
+  .datepicker {
+    width: 48%;
+    margin-top: 1.5em;
+
+    @include respond(xs) {
+      width: 100%;
+    }
+  }
+
+  .button {
+    &Widget {
+      // margin: 3.5em auto 0;
+      margin: auto;
+      width: 100%;
+      //max-width: 420px;
+      display: block;
+    }
+  }
+}

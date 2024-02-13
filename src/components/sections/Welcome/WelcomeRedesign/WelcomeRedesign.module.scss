@@ -1,0 +1,191 @@
+@import '@scss/service/';
+$mob: $sm;
+$tab: $xxs, $xl;
+
+.section {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  max-width: $re-xl;
+  margin: 40px auto 80px;
+  @include respond($re-xl) {
+    padding: 0 16px;
+  }
+  @include respond($tab) {
+    margin: 16px auto 48px;
+    padding: 0 16px;
+  }
+}
+
+.arrow {
+  &Prev {
+    display: flex;
+    align-items: center;
+    @include respond($mob) {
+      display: none;
+    }
+  }
+  &Next {
+    display: flex;
+    align-items: center;
+    transform: rotate(180deg);
+    @include respond($mob) {
+      display: none;
+    }
+  }
+}
+
+.contentWrap {
+  width: 100%;
+  min-height: 560px;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 58px; //0 40px;
+  @include respond($tab) {
+    flex-direction: column;
+    margin: 0;
+    row-gap: 32px; //16px;
+  }
+}
+
+.bannerWrap {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  @include respond($tab) {
+    position: inherit;
+  }
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  max-width: $re-xl - 116px;
+  min-height: 560px;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  @include respond($tab) {
+    align-items: center;
+    padding: 0;
+    max-width: $md; //360px;
+    min-height: 0;
+  }
+  @include respond($mob) {
+    max-width: 360px;
+  }
+}
+
+.main {
+  &Content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%; //???
+    @include respond($mob) {
+      min-width: 209px; //???
+      max-width: 209px; //???
+    }
+  }
+
+  &Text {
+    font-size: 48px;
+    margin: 0;
+    font-weight: 700;
+
+    :global .tag_yellow {
+      color: $re-yellow;
+    }
+    :global .tag_blue {
+      color: $re-blue;
+    }
+
+    @include respond($mob) {
+      font-size: 24px;
+    }
+
+    * {
+      line-height: 117%;
+    }
+  }
+
+  &Image {
+    flex-grow: 1;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    @include respond($tab) {
+      // position: static; //???
+      max-width: 370px;
+      transform: none;
+      bottom: 0;
+    }
+    @include respond($mob) {
+      max-width: 180px;
+    }
+  }
+}
+
+.description {
+  font-size: 12px;
+  color: $re-blue;
+  margin-top: 16px;
+  @include respond($mob) {
+    margin-top: 8px;
+  }
+
+  br {
+    display: none;
+    @include respond($mob) {
+      display: block;
+    }
+  }
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-size: 20px;
+  row-gap: 24px;
+  margin-top: 72px;
+  @include respond($mob) {
+    font-size: 12px;
+    margin-top: 8px;
+    row-gap: 8px;
+  }
+
+  .option {
+    display: flex;
+    column-gap: 8px;
+
+    .icon {
+      flex-shrink: 0;
+      @include respond($mob) {
+        width: 16px;
+      }
+    }
+  }
+}
+
+.productSelector {
+  flex-shrink: 0;
+  z-index: 1;
+  // position: absolute;
+  // top: 0;
+  // right: 0;
+  // @include respond($tab) {
+  //   position: static;
+  //   // margin: auto;
+  // }
+}

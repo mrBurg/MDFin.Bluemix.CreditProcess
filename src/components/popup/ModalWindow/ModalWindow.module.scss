@@ -1,0 +1,147 @@
+@import '@scss/service';
+
+.modal {
+  position: relative;
+  width: 100%;
+  background-color: $white;
+  color: $black;
+  max-width: 404px;
+  // border-radius: 20px;
+  // font-size: 1.25em;
+  padding: 3em;
+  // text-align: center;
+  text-align: justify;
+  line-height: 1.37em;
+
+  @include respond(xs) {
+    font-size: 1em;
+    padding: 2.5em;
+  }
+
+  &Container {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: transparentize($black, 0.5);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .closeButton {
+    position: absolute;
+    right: 1.25em;
+    top: 1.25em;
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    width: 20px;
+    height: 20px;
+    transition: transform 0.2s;
+
+    @include respond(xs) {
+      right: 0.5em;
+      top: 0.5em;
+    }
+
+    &:hover {
+      background: transparent;
+      transform: rotate(90deg);
+    }
+  }
+
+  .buttons {
+    justify-content: space-around;
+    display: flex;
+    margin-top: 1.2em;
+    flex-direction: column;
+  }
+
+  .prompt {
+    &Accept,
+    &Decline {
+      color: $white;
+      padding: 1.25em 1.6em;
+      border: none;
+      border-radius: 8px;
+    }
+
+    &Accept {
+      background-color: $blue-dark;
+      text-transform: uppercase;
+
+      @include respond(xs) {
+        font-size: 0.9em;
+        padding: 1em 1.6em;
+      }
+    }
+
+    &Accept:hover {
+      background-color: $blue;
+    }
+
+    &Decline {
+      background-color: transparent;
+      color: $blue;
+      margin-top: 0.35em;
+
+      @include respond(xs) {
+        font-size: 0.75em;
+      }
+    }
+
+    &Decline:hover {
+      background-color: transparent;
+      color: $blue-dark;
+    }
+  }
+
+  &Transparent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+
+    .modal {
+      font-size: 1em;
+      background-color: transparentize($black, 0.4);
+      border-radius: 15px;
+      color: $white;
+      max-width: 425px;
+      padding: 2em 2.3em;
+
+      @include respond(xs) {
+        padding: 2em 1.5em;
+      }
+    }
+
+    .closeButton {
+      background: transparent;
+
+      path {
+        fill: $gray-light;
+      }
+    }
+  }
+
+  &Text {
+    &Row {
+      margin-bottom: 1em;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &Img {
+    width: 100%;
+
+    &_border {
+      border: 1px solid $gray-light;
+    }
+  }
+}

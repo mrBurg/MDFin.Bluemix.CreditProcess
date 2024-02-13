@@ -1,0 +1,78 @@
+@import '@scss/service';
+
+.tag {
+  .red {
+    color: $red;
+  }
+
+  .year {
+    font-weight: normal;
+    font-size: 2em;
+  }
+
+  .accent {
+    color: $blue;
+  }
+
+  .asterisk:before {
+    content: '*';
+    left: 0.1em;
+    position: relative;
+  }
+
+  .accentedSmall,
+  .accentedMiddle,
+  .accentedNumbersSmall {
+    font-size: 1em;
+    color: $orange;
+    font-weight: bold;
+  }
+
+  .accentedMiddle {
+    font-size: 1.1em;
+  }
+
+  .accentedNumbers,
+  .accentedNumbers_asterisk {
+    font-size: 2em;
+    color: $orange;
+    font-weight: bold;
+  }
+
+  .accentedNumbers_asterisk {
+    @extend .accentedNumbers;
+
+    &:before {
+      content: '*';
+      font-size: 0.4em;
+      left: 0.2em;
+      position: relative;
+      top: -1em;
+    }
+  }
+
+  .accentedNumbers_uppercase {
+    color: $orange;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .notificationTitle {
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+
+  .bolder {
+    font-weight: bold;
+  }
+
+  .interval {
+    margin: 1em 0;
+    display: block;
+    line-height: 0;
+  }
+
+  .indent {
+    margin-left: 1em;
+  }
+}

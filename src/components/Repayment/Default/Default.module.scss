@@ -1,0 +1,20 @@
+@import '../Repayment.module.scss';
+
+.paymentForm {
+  display: flex;
+}
+
+.item {
+  flex-grow: 1;
+}
+
+.actions {
+  margin-left: px2em(30px);
+
+  @include respond(sm) {
+    margin-left: 0;
+    margin-top: px2em(30px);
+    width: 100%;
+    max-width: none;
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "alwaysStrict": true,
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "paths": {
+      "@context/*": ["src/context/*"],
+      "@components/*": ["src/components/*"],
+      "@interfaces": ["src/interfaces"],
+      "@libs/*": ["src/libs/*"],
+      "@routes": ["src/routes"],
+      "@scss/*": ["src/scss/*"],
+      "@stores": ["src/stores"],
+      "@stores-types/*": ["src/stores/@types/*"],
+      "@utils": ["src/utils"],
+      "@src/*": ["src/*"],
+      "@root/*": ["./*"]
+    },
+    "resolveJsonModule": true,
+    "rootDir": ".",
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "esnext",
+    "incremental": true
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs",
+      "target": "esnext"
+    }
+  },
+  "exclude": ["node_modules", "src/libs/public/**/*"],
+  "include": [
+    "declarations/*",
+    "pages/**/*.tsx",
+    "src/**/*.tsx",
+    "src/**/*.ts",
+    "next-env.d.ts"
+  ]
+}

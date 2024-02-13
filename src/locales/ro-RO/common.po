@@ -1,0 +1,210 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: MDFin\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2);\n"
+
+#: 
+msgid "Site Title"
+msgstr "Vay tiền thật dễ dàng!"
+
+#: 
+msgid "Contacts"
+msgstr "Contact"
+
+#: 
+msgid "FAQ"
+msgstr "Întrebări frecvente"
+
+#: 
+msgid "Blog"
+msgstr "Blog"
+
+#: 
+msgid "Repayment"
+msgstr "Cum plătesc"
+
+#: 
+msgid "Sign In"
+msgstr "Intră în cont"
+
+#: 
+msgid "Currency"
+msgstr "Lei"
+
+#: 
+msgid "More"
+msgstr "Continuă"
+
+#: 
+msgid "Sign Up"
+msgstr "Đăng Ký"
+
+#: 
+msgid "Register Loan"
+msgstr "Aplică acum"
+
+#: 
+msgid "Start Loan"
+msgstr "Începeți"
+
+#: 
+msgid "Enter Phone Number"
+msgstr "Nhập Số Điện Thoại"
+
+#: 
+msgid "Confirm"
+msgstr "Aplică"
+
+#: 
+msgid "amount"
+msgstr "Số Tiền Vay"
+
+#: 
+msgid "term"
+msgstr "Kỳ Hạn"
+
+#: 
+msgid "extensionAmount"
+msgstr "Extensie Suma"
+
+#: 
+msgid "totalAmount"
+msgstr "Khoản tiền thanh toán"
+
+#: 
+msgid "dateTo"
+msgstr "Ngày đến hạn thanh toán"
+
+#: 
+msgid "appnum"
+msgstr "Những Thỏa Thuận"
+
+#: 
+msgid "Day"
+msgid_plural "Days"
+msgstr[0] "zi"
+msgstr[1] "zile"
+msgstr[2] "zile"
+
+#: 
+msgid "Second"
+msgid_plural "Seconds"
+msgstr[0] "al doilea"
+msgstr[1] "secunde"
+msgstr[2] "secunde"
+
+#: 
+msgctxt "Will be redirected"
+msgid "%d second"
+msgid_plural "%d seconds"
+msgstr[0] "Veți fi redirecționat în %d secundă"
+msgstr[1] "Veți fi redirecționat în %d secunde"
+msgstr[2] "Veți fi redirecționat în %d secunde"
+
+#: 
+msgid "lastPaymentDate"
+msgstr "Ngày thanh toán gần nhất"
+
+#: 
+msgid "lastPaymentAmount"
+msgstr "Ultima sumă de plată"
+
+#: 
+msgid "dealNo"
+msgstr "Numărul tranzacției"
+
+#: 
+msgid "toPay"
+msgstr "Thanh Toán"
+
+#: 
+msgid "loanAgreement"
+msgstr "Hợp đồng Vay"
+
+#: 
+msgid "maskedName"
+msgstr "Nume"
+
+#: 
+msgid "totalAmountActions"
+msgstr "Tổng Số Tiền"
+
+#: 
+msgid "About Loan"
+msgstr "Despre împrumut"
+
+#: 
+msgid "Logout"
+msgstr "Ieşire din cont"
+
+#: 
+msgid "closingDate"
+msgstr "Data limită"
+
+#: 
+msgid "closingAmount"
+msgstr "Suma de închidere"
+
+#: 
+msgid "paymentAmount"
+msgstr "Suma de plată"
+
+#: 
+msgid "payment"
+msgstr "Plată"
+
+#: 
+msgid "Enter the amount"
+msgstr "Introduceți suma"
+
+#: 
+msgid "or"
+msgstr "sau"
+
+#: 
+msgid "Personal information"
+msgstr "Informaţii personale"
+
+#: 
+msgid "Activity"
+msgstr "Detalii împrumut"
+
+#: 
+msgid "Month"
+msgid_plural "Months"
+msgstr[0] "lună"
+msgstr[1] "luni"
+msgstr[2] "luni"
+
+#: 
+msgid "accept"
+msgstr "Accept"
+
+#: 
+msgid "decline"
+msgstr "Declin"
+
+#: 
+msgid "noOptions"
+msgstr "Fără opțiuni"
+
+#:
+msgid "hotlinePhone"
+msgstr "+40 318 18 18 18"
+
+#:
+msgid "facebookUrl"
+msgstr "https://www.facebook.com/profile.php?id=100089218688915"
+
+#:
+msgid "instagramUrl"
+msgstr "https://www.instagram.com/horacredit.ro"
+
+#:
+msgid "youtubeUrl"
+msgstr "https://youtube.com/@horacredit_ro"

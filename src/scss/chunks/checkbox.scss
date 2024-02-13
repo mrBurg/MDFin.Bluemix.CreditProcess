@@ -1,0 +1,41 @@
+.checkbox {
+  position: relative;
+
+  .hidden {
+    z-index: -1;
+  }
+
+  input[type='checkbox'] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 16px;
+    height: 16px;
+  }
+
+  label {
+    cursor: pointer;
+    user-select: none;
+    text-align: justify;
+    display: flex;
+
+    &:before {
+      flex-shrink: 0;
+      display: block;
+      width: 16px;
+      height: 16px;
+      content: '';
+      background: $white;
+      border: 1px solid $gray;
+      margin-right: px2em(10px);
+    }
+  }
+
+  &.checked {
+    label:before {
+      // background: url('/theme/icons/icons_16x16.svg') -32px -48px;
+      background-color: $blue;
+    }
+  }
+}

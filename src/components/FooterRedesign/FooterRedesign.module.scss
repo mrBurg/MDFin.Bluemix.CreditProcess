@@ -1,0 +1,193 @@
+@import '@scss/service';
+$mob: $md;
+
+.container {
+  width: 100%;
+  background-color: $re-gray-dark;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  font-size: 16px;
+  width: 100%;
+  max-width: $re-xl + 160px;
+  display: flex;
+  column-gap: 24px;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 40px 80px;
+
+  color: $re-gray;
+  @include respond($xl) {
+    padding: 36px;
+  }
+  @include respond($mob) {
+    font-size: 14px;
+    flex-direction: column;
+    row-gap: 40px;
+    padding: 24px 36px 36px;
+  }
+}
+
+.media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //justify-content: space-between;
+  row-gap: 40px;
+  // @include respond($mob) {
+  //   row-gap: 40px;
+  // }
+
+  .social {
+    display: flex;
+    justify-content: center;
+    column-gap: 24px;
+    margin-top: 16px;
+    a {
+      height: 32px;
+    }
+  }
+
+  .getApp {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    font-size: 16px;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.contact {
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  line-height: 24px;
+  flex-basis: 40%;
+
+  .title {
+    font-size: 24px;
+    color: $re-blue;
+    text-indent: 40px;
+    @include respond($mob) {
+      font-size: 20px;
+      text-indent: 0;
+      text-align: center;
+    }
+  }
+
+  .workingHours,
+  .holidayInfo,
+  .phones,
+  .address,
+  .email {
+    display: flex;
+
+    &::before {
+      width: 24px;
+      height: 24px;
+      margin-right: 16px;
+      @include respond($mob) {
+        margin-right: 8px;
+      }
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+
+      span {
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .workingHours {
+    &::before {
+      content: url('/images/footer/clock-icon.svg');
+    }
+  }
+  .holidayInfo {
+    &::before {
+      content: url('/images/footer/tree-christmas-icon.svg');
+    }
+  }
+  .phones {
+    &::before {
+      content: url('/images/footer/phone-call-icon.svg');
+    }
+  }
+  .address {
+    &::before {
+      content: url('/images/footer/map-marker-icon.svg');
+    }
+  }
+  .email {
+    &::before {
+      content: url('/images/footer/email-icon.svg');
+    }
+  }
+
+  .holidayInfo {
+    span {
+      font-weight: 700;
+    }
+
+    &Title {
+      color: $re-blue;
+      font-weight: 700;
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  @include respond($mob) {
+    text-indent: 32px;
+  }
+
+  .link {
+    &:hover {
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
+}
+
+.hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid $re-gray;
+}
+
+.copyright {
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  padding: 24px;
+  justify-content: center;
+  text-align: center;
+
+  font-size: 14px;
+  color: $re-gray;
+  line-height: 24px;
+  @include respond($mob) {
+    padding: 16px 8px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .link {
+    color: $re-blue;
+    text-decoration: underline;
+
+    &:hover {
+      color: $re-blue-dark;
+    }
+  }
+}

@@ -1,0 +1,101 @@
+@import '@scss/service';
+
+.inprocess {
+  width: 100%;
+  max-width: 420px;
+
+  @include respond(md) {
+    font-size: 0.9em;
+  }
+
+  @include respond(sm) {
+    font-size: 0.8em;
+  }
+}
+
+.title {
+  margin: px2em(80px, 24px) auto px2em(45px, 24px);
+  text-align: center;
+  transition: font-size 0.2s;
+
+  @include respond(sm) {
+    font-size: px2em(22px);
+  }
+
+  @include respond(xs) {
+    font-size: px2em(20px);
+  }
+}
+
+.files {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  @include respond(sm) {
+    width: 100%;
+  }
+
+  .file,
+  .button {
+    width: px2em(150px);
+    height: px2em(150px);
+    padding: px2em(15px);
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-flow: column;
+    color: lighten($black, 50%);
+  }
+
+  .button {
+    @extend %shadow;
+    background-color: $white;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+
+    @include respond(sm) {
+      margin-top: px2em(20px);
+      width: 100%;
+      flex-flow: row;
+      height: auto;
+    }
+  }
+
+  .input {
+    display: none;
+  }
+
+  .fileIcon,
+  .addIcon {
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+    background-image: url('/theme/icons/icons_56x56.svg');
+    background-repeat: no-repeat;
+  }
+
+  .fileIcon {
+    background-position: -56px -112px;
+  }
+
+  .addIcon {
+    background-position: 0 -112px;
+    border-radius: 50%;
+  }
+}
+
+.confirm {
+  @extend %button;
+  background-color: $red;
+  width: 100%;
+  max-width: px2em(220px);
+  margin: px2em(35px) auto;
+}

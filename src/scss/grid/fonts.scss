@@ -1,0 +1,175 @@
+// @import url('//fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+// @import url('//fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+/**
+ * .eot - IE9 Compat Modes
+ * .eot?#iefix' - IE6-IE8
+ * .woff2 - Super Modern Browsers
+ * .woff - Modern Browsers
+ * .ttf - Safari, Android, iOS
+ * .svg - Legacy iOS
+*/
+
+/**
+ * SARABUN
+*/
+/* sarabun-300 - latin-ext */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Sarabun';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/fonts/Sarabun/sarabun-v13-latin-ext-300.eot');
+  src: url('/fonts/Sarabun/sarabun-v13-latin-ext-300.eot?#iefix')
+      format('embedded-opentype'),
+    url('/fonts/Sarabun/sarabun-v13-latin-ext-300.woff2') format('woff2'),
+    url('/fonts/Sarabun/sarabun-v13-latin-ext-300.woff') format('woff'),
+    url('/fonts/Sarabun/sarabun-v13-latin-ext-300.ttf') format('truetype'),
+    url('/fonts/Sarabun/sarabun-v13-latin-ext-300.svg#Sarabun') format('svg');
+}
+/* sarabun-300italic - latin-ext */
+@font-face {
+  font-display: swap;
+  font-family: 'Sarabun';
+  font-style: italic;
+  font-weight: 300;
+  src: url('/fonts/Sarabun/sarabun-v13-latin-ext-300italic.eot');
+  src: url('/fonts/Sarabun/sarabun-v13-latin-ext-300italic.eot?#iefix')
+      format('embedded-opentype'),
+    url('/fonts/Sarabun/sarabun-v13-latin-ext-300italic.woff2') format('woff2'),
+    url('/fonts/Sarabun/sarabun-v13-latin-ext-300italic.woff') format('woff'),
+    url('/fonts/Sarabun/sarabun-v13-latin-ext-300italic.ttf') format('truetype'),
+    url('/fonts/Sarabun/sarabun-v13-latin-ext-300italic.svg#Sarabun')
+      format('svg');
+}
+/* sarabun-regular - latin-ext */
+@font-face {
+  font-display: swap;
+  font-family: 'Sarabun';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/Sarabun/sarabun-v13-latin-ext-regular.eot');
+  src: url('/fonts/Sarabun/sarabun-v13-latin-ext-regular.eot?#iefix')
+      format('embedded-opentype'),
+    url('/fonts/Sarabun/sarabun-v13-latin-ext-regular.woff2') format('woff2'),
+    url('/fonts/Sarabun/sarabun-v13-latin-ext-regular.woff') format('woff'),
+    url('/fonts/Sarabun/sarabun-v13-latin-ext-regular.ttf') format('truetype'),
+    url('/fonts/Sarabun/sarabun-v13-latin-ext-regular.svg#Sarabun')
+      format('svg');
+}
+/* sarabun-italic - latin-ext */
+@font-face {
+  font-display: swap;
+  font-family: 'Sarabun';
+  font-style: italic;
+  font-weight: 400;
+  src: url('/fonts/Sarabun/sarabun-v13-latin-ext-italic.eot');
+  src: url('/fonts/Sarabun/sarabun-v13-latin-ext-italic.eot?#iefix')
+      format('embedded-opentype'),
+    url('/fonts/Sarabun/sarabun-v13-latin-ext-italic.woff2') format('woff2'),
+    url('/fonts/Sarabun/sarabun-v13-latin-ext-italic.woff') format('woff'),
+    url('/fonts/Sarabun/sarabun-v13-latin-ext-italic.ttf') format('truetype'),
+    url('/fonts/Sarabun/sarabun-v13-latin-ext-italic.svg#Sarabun') format('svg');
+}
+/* sarabun-700 - latin-ext */
+@font-face {
+  font-display: swap;
+  font-family: 'Sarabun';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/Sarabun/sarabun-v13-latin-ext-700.eot');
+  src: url('/fonts/Sarabun/sarabun-v13-latin-ext-700.eot?#iefix')
+      format('embedded-opentype'),
+    url('/fonts/Sarabun/sarabun-v13-latin-ext-700.woff2') format('woff2'),
+    url('/fonts/Sarabun/sarabun-v13-latin-ext-700.woff') format('woff'),
+    url('/fonts/Sarabun/sarabun-v13-latin-ext-700.ttf') format('truetype'),
+    url('/fonts/Sarabun/sarabun-v13-latin-ext-700.svg#Sarabun') format('svg');
+}
+/* sarabun-700italic - latin-ext */
+@font-face {
+  font-display: swap;
+  font-family: 'Sarabun';
+  font-style: italic;
+  font-weight: 700;
+  src: url('/fonts/Sarabun/sarabun-v13-latin-ext-700italic.eot');
+  src: url('/fonts/Sarabun/sarabun-v13-latin-ext-700italic.eot?#iefix')
+      format('embedded-opentype'),
+    url('/fonts/Sarabun/sarabun-v13-latin-ext-700italic.woff2') format('woff2'),
+    url('/fonts/Sarabun/sarabun-v13-latin-ext-700italic.woff') format('woff'),
+    url('/fonts/Sarabun/sarabun-v13-latin-ext-700italic.ttf') format('truetype'),
+    url('/fonts/Sarabun/sarabun-v13-latin-ext-700italic.svg#Sarabun')
+      format('svg');
+}
+
+/**
+* Fira Sans
+*/
+/* fira-sans-regular - latin-ext */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/FiraSans/fira-sans-v16-latin-ext-regular.eot');
+  src: url('/fonts/FiraSans/fira-sans-v16-latin-ext-regular.eot?#iefix')
+      format('embedded-opentype'),
+    url('/fonts/FiraSans/fira-sans-v16-latin-ext-regular.woff2') format('woff2'),
+    url('/fonts/FiraSans/fira-sans-v16-latin-ext-regular.woff') format('woff'),
+    url('/fonts/FiraSans/fira-sans-v16-latin-ext-regular.ttf')
+      format('truetype'),
+    url('/fonts/FiraSans/fira-sans-v16-latin-ext-regular.svg#FiraSans')
+      format('svg');
+}
+/* fira-sans-700 - latin-ext */
+@font-face {
+  font-display: swap;
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/FiraSans/fira-sans-v16-latin-ext-700.eot');
+  src: url('/fonts/FiraSans/fira-sans-v16-latin-ext-700.eot?#iefix')
+      format('embedded-opentype'),
+    url('/fonts/FiraSans/fira-sans-v16-latin-ext-700.woff2') format('woff2'),
+    url('/fonts/FiraSans/fira-sans-v16-latin-ext-700.woff') format('woff'),
+    url('/fonts/FiraSans/fira-sans-v16-latin-ext-700.ttf') format('truetype'),
+    url('/fonts/FiraSans/fira-sans-v16-latin-ext-700.svg#FiraSans')
+      format('svg');
+}
+/* fira-sans-800 - latin-ext */
+@font-face {
+  font-display: swap;
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 800;
+  src: url('/fonts/FiraSans/fira-sans-v16-latin-ext-800.eot');
+  src: url('/fonts/FiraSans/fira-sans-v16-latin-ext-800.eot?#iefix')
+      format('embedded-opentype'),
+    url('/fonts/FiraSans/fira-sans-v16-latin-ext-800.woff2') format('woff2'),
+    url('/fonts/FiraSans/fira-sans-v16-latin-ext-800.woff') format('woff'),
+    url('/fonts/FiraSans/fira-sans-v16-latin-ext-800.ttf') format('truetype'),
+    url('/fonts/FiraSans/fira-sans-v16-latin-ext-800.svg#FiraSans')
+      format('svg');
+}
+
+/**
+ * KAUSHAN SCRIPT
+*/
+
+/* kaushan-script-regular - latin-ext */
+@font-face {
+  font-display: swap;
+  font-family: 'Kaushan Script';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/KaushanScript/kaushan-script-v14-latin-ext-regular.eot');
+  src: url('/fonts/KaushanScript/kaushan-script-v14-latin-ext-regular.eot?#iefix')
+      format('embedded-opentype'),
+    url('/fonts/KaushanScript/kaushan-script-v14-latin-ext-regular.woff2')
+      format('woff2'),
+    url('/fonts/KaushanScript/kaushan-script-v14-latin-ext-regular.woff')
+      format('woff'),
+    url('/fonts/KaushanScript/kaushan-script-v14-latin-ext-regular.ttf')
+      format('truetype'),
+    url('/fonts/KaushanScript/kaushan-script-v14-latin-ext-regular.svg#KaushanScript')
+      format('svg');
+}

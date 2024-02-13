@@ -1,0 +1,31 @@
+@import '@scss/service';
+
+.productSelector {
+  border-radius: 0.2em;
+  width: 100%;
+  min-width: 304px;
+  max-width: 360px;
+  overflow: hidden;
+  box-shadow: 0 0 0.63em transparentize($black, 0.5);
+
+  &Preloader {
+    width: 100%;
+    min-width: 304px;
+    max-width: 360px;
+    align-self: center;
+    display: flex;
+  }
+
+  .loyaltyCode {
+    padding: 0.8em 1em;
+    background-color: $white;
+
+    :global .input-widget {
+      height: 2em;
+
+      input {
+        border-radius: 5px;
+      }
+    }
+  }
+}

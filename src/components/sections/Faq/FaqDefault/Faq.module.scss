@@ -1,0 +1,18 @@
+@import '@scss/service';
+$mob: $md;
+$tab: $xxs, $xl;
+
+.section {
+  width: 100%;
+}
+.content {
+  padding: 40px 16px;
+  @include respond($mob) {
+    padding: 24px 16px;
+  }
+}
+.faqWrap {
+  max-width: 628px;
+  display: flex;
+  margin: auto;
+}
